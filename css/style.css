@@ -1,0 +1,116 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header
+{
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 80px;
+    text-decoration: none;
+    list-style-type: none;
+    
+    /*color: rgb(0, 123, 255);*/
+}
+
+header > .nav
+{
+    color: white;
+}
+
+header a 
+{
+    color: white;
+    text-decoration: none;
+}
+
+
+header li 
+{
+    list-style-type: none;
+    /*margin-right: 10px;*/
+    padding:10px;
+}
+
+
+.div_before_nav
+{
+    display: flex;
+    height:35%;
+    align-items: center;
+}
+
+.div_before_nav a 
+{
+    color: black;
+}
+
+.div_before_nav_links 
+{
+    display: flex;
+    width: 20%;
+    justify-content: center;
+}
+.div_before_nav_links > p 
+{
+    padding: 10px;
+    justify-content: center;
+}
+
+.div_before_nav_first_div
+{
+    display: flex;
+    width:80%;
+}
+
+
+/* ---------------beginning of the navigation bar styling -----------------------------*/
+
+.nav 
+{
+
+    background-color:rgb(95, 194, 247); 
+    height:65%;
+    display:flex;
+    align-items: center;
+}
+
+.nav > .mobile_shopee 
+{
+    display: flex;
+    width:10%;
+    justify-content: center;
+}
+
+.nav > .nav_ul 
+{
+    display: flex;
+    width: 80%;
+    justify-content: center;
+}
+
+.nav > .shoping_cart 
+{
+    display: flex;
+    width:10%;
+    justify-content: center;
+}
+
+.nav > ul > li select
+{
+
+    border:0;
+    color:white;
+    background-color:rgb(95, 194, 247); ;
+}
+
+.nav > ul > li:first-child 
+{
+    font-weight: bolder;
+}
+
+/*--------------------------end of the navigation bar styling ----------------------------*/
