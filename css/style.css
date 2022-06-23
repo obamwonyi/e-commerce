@@ -114,3 +114,58 @@ header li
 }
 
 /*--------------------------end of the navigation bar styling ----------------------------*/
+
+
+/* ------------------------this is the section for the banner ---------------------------*/
+
+
+
+
+.banner_container 
+{
+    display: flex;
+    flex-direction: column;
+    width:100%;
+}
+
+
+
+.banner_div 
+{
+    background-image: url("/e_comerce_tuts/Mobile_Shopee-E-Commerce-Website/assets/Banner1.png");
+    width: 100vw; 
+    height:42vw;
+    background-size: cover;
+    background-position: center;
+
+}
+
+.banner_nav_button
+{
+    width: 20%;
+    margin: auto;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.banner_button 
+{
+    width: 15px;
+    height:15px;
+    border-radius: 50px;
+    background:rgb(85, 83, 83);
+    margin-right: 10px;
+    cursor:pointer;
+}
+
+.banner_button_off 
+{
+    width: 15px;
+    height:15px;
+    border:0px;
+    border-radius: 50px;
+    background:rgb(196, 194, 194);
+    margin-right: 10px;
+}
