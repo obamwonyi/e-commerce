@@ -140,6 +140,17 @@ header li
 
 }
 
+
+.banner_div_two
+{
+    background-image: url("/e_comerce_tuts/Mobile_Shopee-E-Commerce-Website/assets/Banner2.png");
+    width: 100vw; 
+    height:42vw;
+    background-size: cover;
+    background-position: center;
+
+}
+
 .banner_nav_button
 {
     width: 20%;
