@@ -1,84 +1,149 @@
-.scroll_body
+
+.scroll_menu
 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height:30vh;
-    width:80%;
-    margin: auto;
+    width: 80vw;
+    height: 35vh;
+   /* border: 2px solid red;*/
+    margin:auto;
     margin-top: 50px;
-}
-
-.main_scroll_div
-{
-    width:100%;
-    height:100%;
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.cover 
-{
-    position: relative;
-    width:100%;
-    height:100%;
-}
-
-.scroll_images 
-{
-    width:100%;
-    height:100%;
-    display:flex;
-    justify-content:left;
-    align-items: center;
-    overflow-x: auto;
-    position: relative;
     scroll-behavior: smooth;
 }
 
-.child 
+
+
+.scroll_menu_button 
 {
-    min-width: 20%;
+    width:5%;
     height:100%;
-    margin: 1px 10px;
-    display: flex;
-    align-items: center;
-    cursor:pointer;
-    border: 1px solid white;
-    overflow:hidden;
 }
 
-.scroll_images::-webkit-scrollbar 
+.main_scroller
+{
+    display: flex;
+    width:90%;
+    height:100%;
+    overflow-y: hidden;
+    overflow-x:auto;
+    scroll-behavior: smooth;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+
+.main_scroller::-webkit-scrollbar 
 {
     -webkit-appearance: none;
 }
 
-.child_image 
+
+.item_div
 {
-    width: 9rem;
-    height:9rem;
+    min-width:20%;
+    height:100%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.icon 
+.item 
 {
-    color: rgb(67,247,76);
-    outline: none;
-    border:none;
-    padding:5px;
-    cursor: pointer;
-    width:50px;
+    max-width:7rem;
+    height:7rem;
+}
+
+
+.item_text 
+{
+    display: flex;
+    height: 45%;
+    margin-top: 20px;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ---------styling the scroll buttons --------------*/
+
+.button_svg
+{
+    width: 100%;
     height:100%;
 }
-.icon:hover 
-{
-    color: yellow;
-}
 
-
-.button_image
+.scroll_menu_button > button 
 {
     width:100%;
-    cursor:pointer;
+    height:100%;
+    border:0px;
+    background-color: white;
+    cursor: pointer;
+
 }
 
+
+
+/* --------------------------- star rating for scrolling section styling -----------------------------*/
+.star_rating
+{
+    display: flex;
+    max-width:80%;
+    height:20%;
+    width:auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.star_rating_span 
+{
+    display: flex;
+    width:20%;
+    height:100%;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.item_div_paragraph 
+{
+    display: flex;
+    width:100%;
+    height:20%;
+    width:auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.gold_star_icon
+{
+    width:100%;
+    height:100%;
+    margin-right: 5px;
+}
+
+.plain_star_icon
+{
+    width:100%;
+    height:100%;
+}
+
+
+.item_button 
+{
+    background-color: orange;
+    width:100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    border:0px;
+    color:white;
+}
+
+.item_text > p 
+{
+    margin: 0px;
+}
+
+.img_div
+{
+    height:45%;
+    margin-bottom: 20px;
+}
