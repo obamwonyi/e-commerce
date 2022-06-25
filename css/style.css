@@ -132,7 +132,7 @@ header li
 
 .banner_div 
 {
-    background-image: url("/e_comerce_tuts/Mobile_Shopee-E-Commerce-Website/assets/Banner1.png");
+    background-image: url("/assets/Banner1.png");
     width: 100vw; 
     height:42vw;
     background-size: cover;
@@ -143,7 +143,7 @@ header li
 
 .banner_div_two
 {
-    background-image: url("/e_comerce_tuts/Mobile_Shopee-E-Commerce-Website/assets/Banner2.png");
+    background-image: url("/assets/Banner2.png");
     width: 100vw; 
     height:42vw;
     background-size: cover;

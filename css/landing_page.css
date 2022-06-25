@@ -1,11 +1,26 @@
 
+.scroll_menu_header
+{
+    width: 80vw;
+    margin:auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border-bottom: 2px solid rgb(189, 188, 188);
+
+}
+
+.scroll_menu_header > h2 
+{
+    width: 100%;
+    font-weight: lighter;
+}
+
 .scroll_menu
 {
     width: 80vw;
     height: 35vh;
    /* border: 2px solid red;*/
     margin:auto;
-    margin-top: 50px;
     display: flex;
     scroll-behavior: smooth;
 }
@@ -44,21 +59,22 @@
     display:flex;
     flex-direction: column;
     align-items: center;
+    justify-content:center;
 }
 
 .item 
 {
-    max-width:7rem;
-    height:7rem;
+    max-width:6rem;
+    height:6rem;
 }
 
 
 .item_text 
 {
     display: flex;
-    height: 45%;
-    margin-top: 20px;
+    height: 50%;
     flex-direction: column;
+    justify-content:space-evenly;
     align-items: center;
 }
 
@@ -144,6 +160,82 @@
 
 .img_div
 {
-    height:45%;
-    margin-bottom: 20px;
+    height:50%;
+    /*margin-bottom: 20px;*/
+}
+
+
+
+/*----------------------------------special items section styling -------------------------*/
+
+.special_price
+{
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    margin:auto;
+    margin-top: 50px;
+    align-items: center;
+    justify-content:center;
+}
+
+.special_price_header
+{
+    display: flex;
+    width:100%;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid rgb(189, 188, 188);
+
+}
+
+.special_price_header_div
+{
+    display: flex;
+    width:20%;
+    align-items: center;
+}
+
+.special_price_ul
+{
+    display: flex;
+    width:30%;
+    justify-content:space-evenly;
+    align-items: center;
+}
+
+.special_price_ul > li 
+{
+    list-style: none;
+}
+
+.special_price_ul > li > a  
+{
+    text-decoration: none;
+    color: black;
+}
+
+.special_price_heading
+{
+    font-weight: lighter;
+}
+
+
+
+.special_price_items
+{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.special_price_items_row
+{
+    width: 100%;
+    height: 35vh;
+    margin-top: 20px;
+    display: flex;
+    /*justify-content: center;*/
 }
