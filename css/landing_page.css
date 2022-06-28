@@ -310,3 +310,112 @@
     font-weight:lighter;
 
 }
+
+
+
+
+
+/*--------------------this is the footer section styling ---------------------------*/
+
+.footer 
+{
+    width:100vw;
+    background-color:rgb(30, 29, 41);
+    padding:20px;
+}
+
+.footer_div
+{
+    width: 80%;
+    margin:auto;
+    display: flex;
+}
+
+.footer_div_section_one
+{
+    width:25%;
+    color: white;
+    margin-right: 50px;
+}
+
+
+.footer_div_section_three
+{
+    width:20%;
+    color: white;
+}
+
+.footer_div_section_two
+{
+    width:35%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.sub_input
+{
+    width:120px;
+    height:25px;
+    padding:2px;
+    padding-left: 5px;
+    border:0;
+    border-radius: 2px;
+    margin-right: 10px;
+}
+
+.subscribe_button
+{
+    width: 70px; 
+    padding: 2px;
+    height:25px;
+    background-color: rgb(24, 86, 242);
+    border:0;
+    border-radius: 2px;
+    color:white;
+}
+
+.subscribe_form 
+{
+    margin-top: 10px;
+    display: flex;
+}
+
+.footer_header 
+{
+    margin-bottom: 15px;
+}
+
+.footer_p 
+{
+    color: rgb(131, 129, 129);
+    font-weight: 10px;
+}
+
+.footer_ul 
+{
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    list-style:none;
+}
+
+.footer_ul > li > a 
+{
+    color: rgb(131, 129, 129);
+    text-decoration: none;
+}
+
+
+.copy_write 
+{
+    display: flex;
+    color: white;
+    justify-content:center;
+    margin-top: 100px;
+}
+
+.name 
+{
+    color: rgb(0, 132, 255);
+}
