@@ -42,6 +42,7 @@ header li
     display: flex;
     height:35%;
     align-items: center;
+    padding-top: 5px;
 }
 
 .div_before_nav a 
@@ -55,18 +56,74 @@ header li
     width: 20%;
     justify-content: center;
 }
+
+.login_icon
+{
+    width : 25px;
+    height : 25px;
+}
+.login_span 
+{
+    width:50%;
+}
+
+.login_link
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.shopping_cart
+{
+    width : 30px;
+    height : 30px;
+}
+.shopping_cart_button
+{
+    border:0;
+    cursor: pointer;
+    background-color: white;
+
+}
+
+.shopping_cart_div
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    border-radius: 50px;
+}
+
+.shopping_cart_value
+{
+    color:white;
+    padding:1px 5px;
+    background-color: rgb(95, 194, 247);
+    border-radius: 50px;
+}
+
 .div_before_nav_links > p 
 {
     padding: 10px;
+    display: flex;
     justify-content: center;
+    align-items: center;
+    width:50%;
 }
 
 .div_before_nav_first_div
 {
     display: flex;
     width:80%;
+    padding-left: 30px;
 }
-
+/*div_before_nav_first_div*/
 
 /* ---------------beginning of the navigation bar styling -----------------------------*/
 
