@@ -157,6 +157,19 @@
     transition: transform 0.5;
 }
 
+.item_out_of_stock_button
+{
+    background-color: rgb(0, 255, 157);
+    width:60%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 5px;
+    border:0px;
+    color:white;
+    cursor: pointer;
+    transition: transform 0.5;
+}
+
 
 .item_button:hover 
 {

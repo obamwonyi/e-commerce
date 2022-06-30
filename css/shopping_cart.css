@@ -243,14 +243,21 @@
 
 
 
+.whishlist 
+{
+    margin-bottom:150px;
+}
+
+
+.scroll_menu_header
+{
+    border-bottom: 2px solid rgb(189, 188, 188);
+}
 
 
 
-
-
-
-
-
-
-
+.footer 
+{
+    margin-top: 50px;
+}
 /*--------------------------end of styling for the cart section ----------------------------*/ 
