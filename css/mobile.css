@@ -305,3 +305,29 @@
     text-decoration: none;
     color:blue;
 }
+
+.product_description
+{
+    display: flex;
+    flex-direction: column;
+    width:90%;
+    margin:auto;
+}
+
+.product_description_header
+{
+    border-bottom: 2px solid gray;
+    padding:10px;
+    font-weight: lighter;
+}
+
+.product_description_text
+{
+    margin-top: 30px;
+    padding:10px;
+}
+
+.product_description_p
+{
+    margin-bottom: 20px;
+}
