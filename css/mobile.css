@@ -21,7 +21,6 @@
     display:flex;
     flex-direction:column;
     width:50%;
-    background-color: green;
 }
 
 .mobile_phone
@@ -95,7 +94,6 @@
     height:50%;
     display: flex;
     flex-direction: column;
-    background-color: rgb(0, 166, 255);
     justify-content:space-between;
     padding: 10px;
     padding-bottom: 0;
@@ -120,12 +118,18 @@
     margin-left: 10px;
 }
 
+.mobile_text_div3 
+{
+    padding:10px;
+    padding-bottom: 0;
+}
+
 
 .delivery_info 
 {
     width:50%;
     display: flex;
-    padding-top: 20px;
+    padding: 10px;
 }
 
 .mobile_img
@@ -158,7 +162,6 @@
     height:100%;
     align-items: center;
     /*justify-content:center;*/
-    background-color:orange;
     margin-right: 10px;
 }
 
@@ -181,7 +184,11 @@
 {
     width:100%;
     height:35%;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
 }
+
 
 
 /* ----------------styling the item star rating  section of the mobile ------------------------*/ 
@@ -217,4 +224,84 @@
     padding: 2px;
 }
 
+.location_icon
+{
+    width:30px;
+    height:30px;
+}
 
+
+.available_color
+{
+    width:40px;
+    height:40px;
+    background-color:white;
+    border-radius: 50px;
+    margin-right: 10px;
+    border: 0;
+}
+
+.mobile_color_selection_p
+{
+    display: flex;
+    align-items: center;
+}
+
+.mobile_colors
+{
+    margin-left: 30px;
+}
+
+.color1 
+{
+    background-color: rgb(235, 192, 85);
+}
+
+.color2
+{
+    background-color: rgb(52, 42, 135);
+}
+
+.color3
+{
+    background-color: rgb(85, 163, 235);
+}
+
+.quantity_input_form
+{
+    display: flex;
+    margin-left: 30px;
+}
+
+.add_margin 
+{
+    margin-left: 10px;
+}
+
+.available_sizes_p
+{
+    display: flex;
+    flex-direction: column;
+    width:70%;
+
+}
+
+.mobile_item_size
+{
+    padding:10px;
+    background-color: white;
+    border: 1px solid black;
+}
+
+.available_sizes
+{
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.daily_electronics
+{
+    text-decoration: none;
+    color:blue;
+}
