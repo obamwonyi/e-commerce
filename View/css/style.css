@@ -189,7 +189,7 @@ header li
 
 .banner_div 
 {
-    background-image: url("/assets/Banner1.png");
+    background-image: url("../assets/Banner1.png");
     width: 100vw; 
     height:42vw;
     background-size: cover;
@@ -200,7 +200,7 @@ header li
 
 .banner_div_two
 {
-    background-image: url("/assets/Banner2.png");
+    background-image: url("../assets/Banner2.png");
     width: 100vw; 
     height:42vw;
     background-size: cover;

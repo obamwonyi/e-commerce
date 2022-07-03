@@ -77,6 +77,13 @@
     </header>
 
 
+
+
+    <?php  include_once "./templatefiles/landing_page.php" ?>
+
+
+
+
     <footer class="footer">
       <div class="footer_div">
         <div class="footer_div_section_one">

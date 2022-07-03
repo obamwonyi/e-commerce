@@ -18,7 +18,7 @@
     <section class="scroll_menu">
 
       <div class="scroll_menu_button">
-        <button   onclick="scrollR()"> <img src="./assets/svgs/left-arrow-7300.svg" alt="" srcset="" class="button_svg"> </button>
+        <button   onclick="scrollR()"> <img src="../assets/svgs/left-arrow-7300.svg" alt="" srcset="" class="button_svg"> </button>
       </div>
 
       <div class="main_scroller">
@@ -26,16 +26,16 @@
         <!-------------------div for and item-------------------------------------------------------------------------->
         <div class="item_div">
           <div class="img_div">
-            <img src="./assets/products/1.png" alt="" srcset="" class="item">
+            <img src="../assets/products/1.png" alt="" srcset="" class="item">
           </div>
           <div class="item_text">
             <p  class="item_div_paragraph">Galaxy S6 edge</p>
             <p class="star_rating">
-              <span  class="star_rating_span"><img src="./assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-              <span  class="star_rating_span"><img src="./assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-              <span  class="star_rating_span"><img src="./assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-              <span  class="star_rating_span"><img src="./assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-              <span  class="star_rating_span"><img src="./assets/svgs/plain_star.svg" alt="" srcset="" class="plain_star_icon"></span>
+              <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
+              <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
+              <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
+              <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
+              <span  class="star_rating_span"><img src="../assets/svgs/plain_star.svg" alt="" srcset="" class="plain_star_icon"></span>
             </p>
             <p  class="item_div_paragraph"><span>$90</span></p>
             <p class="item_div_paragraph"><button class="item_button">buy</button></p>
@@ -45,16 +45,16 @@
         <!-------------------div for and item-------------------------------------------------------------------------->
         <div class="item_div">
           <div class="img_div">
-            <img src="./assets/products/2.png" alt="" srcset="" class="item">
+            <img src="../assets/products/2.png" alt="" srcset="" class="item">
           </div>
           <div class="item_text">
-            <p  class="item_div_paragraph">Redmi Note 4</p>
+            <p  class="item_div_paragraph">Galaxy S6 edge</p>
             <p class="star_rating">
-              <span  class="star_rating_span"><img src="./assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-              <span  class="star_rating_span"><img src="./assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-              <span  class="star_rating_span"><img src="./assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-              <span  class="star_rating_span"><img src="./assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-              <span  class="star_rating_span"><img src="./assets/svgs/plain_star.svg" alt="" srcset="" class="plain_star_icon"></span>
+              <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
+              <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
+              <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
+              <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
+              <span  class="star_rating_span"><img src="../assets/svgs/plain_star.svg" alt="" srcset="" class="plain_star_icon"></span>
             </p>
             <p  class="item_div_paragraph"><span>$90</span></p>
             <p class="item_div_paragraph"><button class="item_button">buy</button></p>
@@ -64,16 +64,16 @@
         <!-------------------div for and item-------------------------------------------------------------------------->
         <div class="item_div">
           <div class="img_div">
-            <img src="./assets/products/3.png" alt="" srcset="" class="item">
+            <img src="../assets/products/3.png" alt="" srcset="" class="item">
           </div>
           <div class="item_text">
-            <p  class="item_div_paragraph">Redmi 3</p>
+            <p  class="item_div_paragraph">Galaxy S6 edge</p>
             <p class="star_rating">
-              <span  class="star_rating_span"><img src="./assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-              <span  class="star_rating_span"><img src="./assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-              <span  class="star_rating_span"><img src="./assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-              <span  class="star_rating_span"><img src="./assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-              <span  class="star_rating_span"><img src="./assets/svgs/plain_star.svg" alt="" srcset="" class="plain_star_icon"></span>
+              <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
+              <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
+              <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
+              <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
+              <span  class="star_rating_span"><img src="../assets/svgs/plain_star.svg" alt="" srcset="" class="plain_star_icon"></span>
             </p>
             <p  class="item_div_paragraph"><span>$90</span></p>
             <p class="item_div_paragraph"><button class="item_button">buy</button></p>
@@ -83,16 +83,16 @@
         <!-------------------div for and item-------------------------------------------------------------------------->
         <div class="item_div">
           <div class="img_div">
-            <img src="./assets/products/4.png" alt="" srcset="" class="item">
+            <img src="../assets/products/4.png" alt="" srcset="" class="item">
           </div>
           <div class="item_text">
-            <p  class="item_div_paragraph">Redmi 4</p>
+            <p  class="item_div_paragraph">Galaxy S6 edge</p>
             <p class="star_rating">
-              <span  class="star_rating_span"><img src="./assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-              <span  class="star_rating_span"><img src="./assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-              <span  class="star_rating_span"><img src="./assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-              <span  class="star_rating_span"><img src="./assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-              <span  class="star_rating_span"><img src="./assets/svgs/plain_star.svg" alt="" srcset="" class="plain_star_icon"></span>
+              <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
+              <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
+              <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
+              <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
+              <span  class="star_rating_span"><img src="../assets/svgs/plain_star.svg" alt="" srcset="" class="plain_star_icon"></span>
             </p>
             <p  class="item_div_paragraph"><span>$90</span></p>
             <p class="item_div_paragraph"><button class="item_button">buy</button></p>
@@ -102,16 +102,16 @@
         <!-------------------div for and item-------------------------------------------------------------------------->
         <div class="item_div">
           <div class="img_div">
-            <img src="./assets/products/5.png" alt="" srcset="" class="item">
+            <img src="../assets/products/5.png" alt="" srcset="" class="item">
           </div>
           <div class="item_text">
-            <p  class="item_div_paragraph">Redmi 5</p>
+            <p  class="item_div_paragraph">Galaxy S6 edge</p>
             <p class="star_rating">
-              <span  class="star_rating_span"><img src="./assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-              <span  class="star_rating_span"><img src="./assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-              <span  class="star_rating_span"><img src="./assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-              <span  class="star_rating_span"><img src="./assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-              <span  class="star_rating_span"><img src="./assets/svgs/plain_star.svg" alt="" srcset="" class="plain_star_icon"></span>
+              <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
+              <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
+              <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
+              <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
+              <span  class="star_rating_span"><img src="../assets/svgs/plain_star.svg" alt="" srcset="" class="plain_star_icon"></span>
             </p>
             <p  class="item_div_paragraph"><span>$90</span></p>
             <p class="item_div_paragraph"><button class="item_button">buy</button></p>
@@ -121,16 +121,16 @@
         <!-------------------div for and item-------------------------------------------------------------------------->
         <div class="item_div">
           <div class="img_div">
-            <img src="./assets/products/6.png" alt="" srcset="" class="item">
+            <img src="../assets/products/6.png" alt="" srcset="" class="item">
           </div>
           <div class="item_text">
-            <p  class="item_div_paragraph">Redmi 6</p>
+            <p  class="item_div_paragraph">Galaxy S6 edge</p>
             <p class="star_rating">
-              <span  class="star_rating_span"><img src="./assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-              <span  class="star_rating_span"><img src="./assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-              <span  class="star_rating_span"><img src="./assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-              <span  class="star_rating_span"><img src="./assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-              <span  class="star_rating_span"><img src="./assets/svgs/plain_star.svg" alt="" srcset="" class="plain_star_icon"></span>
+              <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
+              <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
+              <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
+              <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
+              <span  class="star_rating_span"><img src="../assets/svgs/plain_star.svg" alt="" srcset="" class="plain_star_icon"></span>
             </p>
             <p  class="item_div_paragraph"><span>$90</span></p>
             <p class="item_div_paragraph"><button class="item_button">buy</button></p>
@@ -140,16 +140,16 @@
         <!-------------------div for and item-------------------------------------------------------------------------->
         <div class="item_div">
           <div class="img_div">
-            <img src="./assets/products/7.png" alt="" srcset="" class="item">
+            <img src="../assets/products/7.png" alt="" srcset="" class="item">
           </div>
           <div class="item_text">
-            <p  class="item_div_paragraph">Redmi 7</p>
+            <p  class="item_div_paragraph">Galaxy S6 edge</p>
             <p class="star_rating">
-              <span  class="star_rating_span"><img src="./assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-              <span  class="star_rating_span"><img src="./assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-              <span  class="star_rating_span"><img src="./assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-              <span  class="star_rating_span"><img src="./assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-              <span  class="star_rating_span"><img src="./assets/svgs/plain_star.svg" alt="" srcset="" class="plain_star_icon"></span>
+              <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
+              <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
+              <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
+              <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
+              <span  class="star_rating_span"><img src="../assets/svgs/plain_star.svg" alt="" srcset="" class="plain_star_icon"></span>
             </p>
             <p  class="item_div_paragraph"><span>$90</span></p>
             <p class="item_div_paragraph"><button class="item_button">buy</button></p>
@@ -159,16 +159,16 @@
         <!-------------------div for and item-------------------------------------------------------------------------->
         <div class="item_div">
           <div class="img_div">
-            <img src="./assets/products/8.png" alt="" srcset="" class="item">
+            <img src="../assets/products/8.png" alt="" srcset="" class="item">
           </div>
           <div class="item_text">
-            <p  class="item_div_paragraph">Redmi 8</p>
+            <p  class="item_div_paragraph">Galaxy S6 edge</p>
             <p class="star_rating">
-              <span  class="star_rating_span"><img src="./assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-              <span  class="star_rating_span"><img src="./assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-              <span  class="star_rating_span"><img src="./assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-              <span  class="star_rating_span"><img src="./assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-              <span  class="star_rating_span"><img src="./assets/svgs/plain_star.svg" alt="" srcset="" class="plain_star_icon"></span>
+              <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
+              <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
+              <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
+              <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
+              <span  class="star_rating_span"><img src="../assets/svgs/plain_star.svg" alt="" srcset="" class="plain_star_icon"></span>
             </p>
             <p  class="item_div_paragraph"><span>$90</span></p>
             <p class="item_div_paragraph"><button class="item_button">buy</button></p>
@@ -178,16 +178,16 @@
         <!-------------------div for and item-------------------------------------------------------------------------->
         <div class="item_div">
           <div class="img_div">
-            <img src="./assets/products/9.png" alt="" srcset="" class="item">
+            <img src="../assets/products/9.png" alt="" srcset="" class="item">
           </div>
           <div class="item_text">
-            <p  class="item_div_paragraph">Galaxy S6</p>
+            <p  class="item_div_paragraph">Galaxy S6 edge</p>
             <p class="star_rating">
-              <span  class="star_rating_span"><img src="./assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-              <span  class="star_rating_span"><img src="./assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-              <span  class="star_rating_span"><img src="./assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-              <span  class="star_rating_span"><img src="./assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-              <span  class="star_rating_span"><img src="./assets/svgs/plain_star.svg" alt="" srcset="" class="plain_star_icon"></span>
+              <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
+              <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
+              <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
+              <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
+              <span  class="star_rating_span"><img src="../assets/svgs/plain_star.svg" alt="" srcset="" class="plain_star_icon"></span>
             </p>
             <p  class="item_div_paragraph"><span>$90</span></p>
             <p class="item_div_paragraph"><button class="item_button">buy</button></p>
@@ -197,16 +197,16 @@
         <!-------------------div for and item-------------------------------------------------------------------------->
         <div class="item_div">
           <div class="img_div">
-            <img src="./assets/products/10.png" alt="" srcset="" class="item">
+            <img src="../assets/products/10.png" alt="" srcset="" class="item">
           </div>
           <div class="item_text">
-            <p  class="item_div_paragraph">Galaxy S7</p>
+            <p  class="item_div_paragraph">Galaxy S6 edge</p>
             <p class="star_rating">
-              <span  class="star_rating_span"><img src="./assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-              <span  class="star_rating_span"><img src="./assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-              <span  class="star_rating_span"><img src="./assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-              <span  class="star_rating_span"><img src="./assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-              <span  class="star_rating_span"><img src="./assets/svgs/plain_star.svg" alt="" srcset="" class="plain_star_icon"></span>
+              <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
+              <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
+              <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
+              <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
+              <span  class="star_rating_span"><img src="../assets/svgs/plain_star.svg" alt="" srcset="" class="plain_star_icon"></span>
             </p>
             <p  class="item_div_paragraph"><span>$90</span></p>
             <p class="item_div_paragraph"><button class="item_button">buy</button></p>
@@ -216,16 +216,16 @@
         <!-------------------div for and item-------------------------------------------------------------------------->
         <div class="item_div">
           <div class="img_div">
-            <img src="./assets/products/11.png" alt="" srcset="" class="item">
+            <img src="../assets/products/11.png" alt="" srcset="" class="item">
           </div>
           <div class="item_text">
-            <p  class="item_div_paragraph">Redmi 11</p>
+            <p  class="item_div_paragraph">Galaxy S6 edge</p>
             <p class="star_rating">
-              <span  class="star_rating_span"><img src="./assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-              <span  class="star_rating_span"><img src="./assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-              <span  class="star_rating_span"><img src="./assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-              <span  class="star_rating_span"><img src="./assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-              <span  class="star_rating_span"><img src="./assets/svgs/plain_star.svg" alt="" srcset="" class="plain_star_icon"></span>
+              <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
+              <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
+              <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
+              <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
+              <span  class="star_rating_span"><img src="../assets/svgs/plain_star.svg" alt="" srcset="" class="plain_star_icon"></span>
             </p>
             <p  class="item_div_paragraph"><span>$90</span></p>
             <p class="item_div_paragraph"><button class="item_button">buy</button></p>
@@ -235,46 +235,28 @@
         <!-------------------div for and item-------------------------------------------------------------------------->
         <div class="item_div">
           <div class="img_div">
-            <img src="./assets/products/12.png" alt="" srcset="" class="item">
+            <img src="../assets/products/12.png" alt="" srcset="" class="item">
           </div>
           <div class="item_text">
-            <p  class="item_div_paragraph">Iphone 6</p>
+            <p  class="item_div_paragraph">Galaxy S6 edge</p>
             <p class="star_rating">
-              <span  class="star_rating_span"><img src="./assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-              <span  class="star_rating_span"><img src="./assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-              <span  class="star_rating_span"><img src="./assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-              <span  class="star_rating_span"><img src="./assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-              <span  class="star_rating_span"><img src="./assets/svgs/plain_star.svg" alt="" srcset="" class="plain_star_icon"></span>
+              <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
+              <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
+              <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
+              <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
+              <span  class="star_rating_span"><img src="../assets/svgs/plain_star.svg" alt="" srcset="" class="plain_star_icon"></span>
             </p>
             <p  class="item_div_paragraph"><span>$90</span></p>
             <p class="item_div_paragraph"><button class="item_button">buy</button></p>
           </div>
         </div>
 
-        <!-------------------div for and item-------------------------------------------------------------------------->
-        <div class="item_div">
-          <div class="img_div">
-            <img src="./assets/products/13.png" alt="" srcset="" class="item">
-          </div>
-          <div class="item_text">
-            <p  class="item_div_paragraph">Iphone 6 pro</p>
-            <p class="star_rating">
-              <span  class="star_rating_span"><img src="./assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-              <span  class="star_rating_span"><img src="./assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-              <span  class="star_rating_span"><img src="./assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-              <span  class="star_rating_span"><img src="./assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-              <span  class="star_rating_span"><img src="./assets/svgs/plain_star.svg" alt="" srcset="" class="plain_star_icon"></span>
-            </p>
-            <p  class="item_div_paragraph"><span>$90</span></p>
-            <p class="item_div_paragraph"><button class="item_button">buy</button></p>
-          </div>
-        </div>
-
+        
 
       </div>
 
       <div class="scroll_menu_button">
-        <button  onclick="scrollL()"><img src="./assets/svgs/right-arrow-7299.svg" alt="" srcset="" class="button_svg"></button>
+        <button  onclick="scrollL()"><img src="../assets/svgs/right-arrow-7299.svg" alt="" srcset="" class="button_svg"></button>
       </div>
     </section>
 
@@ -308,240 +290,246 @@
           <!------------------item for the all product section -->
           <div class="item_div">
             <div class="img_div">
-              <img src="./assets/products/1.png" alt="" srcset="" class="item">
+              <img src="../assets/products/1.png" alt="" srcset="" class="item">
             </div>
             <div class="item_text">
               <p  class="item_div_paragraph">Iphone 6</p>
               <p class="star_rating">
-                <span  class="star_rating_span"><img src="./assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-                <span  class="star_rating_span"><img src="./assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-                <span  class="star_rating_span"><img src="./assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-                <span  class="star_rating_span"><img src="./assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-                <span  class="star_rating_span"><img src="./assets/svgs/plain_star.svg" alt="" srcset="" class="plain_star_icon"></span>
+                <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
+                <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
+                <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
+                <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
+                <span  class="star_rating_span"><img src="../assets/svgs/plain_star.svg" alt="" srcset="" class="plain_star_icon"></span>
               </p>
               <p  class="item_div_paragraph"><span>$90</span></p>
               <p class="item_div_paragraph"><button class="item_button">buy</button></p>
             </div>
           </div>
+
+          <!------------------item for the all product section -->
           <div class="item_div">
             <div class="img_div">
-              <img src="./assets/products/2.png" alt="" srcset="" class="item">
+              <img src="../assets/products/2.png" alt="" srcset="" class="item">
             </div>
             <div class="item_text">
               <p  class="item_div_paragraph">Iphone 6</p>
               <p class="star_rating">
-                <span  class="star_rating_span"><img src="./assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-                <span  class="star_rating_span"><img src="./assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-                <span  class="star_rating_span"><img src="./assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-                <span  class="star_rating_span"><img src="./assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-                <span  class="star_rating_span"><img src="./assets/svgs/plain_star.svg" alt="" srcset="" class="plain_star_icon"></span>
+                <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
+                <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
+                <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
+                <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
+                <span  class="star_rating_span"><img src="../assets/svgs/plain_star.svg" alt="" srcset="" class="plain_star_icon"></span>
               </p>
               <p  class="item_div_paragraph"><span>$90</span></p>
               <p class="item_div_paragraph"><button class="item_button">buy</button></p>
             </div>
           </div>
+
+          <!------------------item for the all product section -->
           <div class="item_div">
             <div class="img_div">
-              <img src="./assets/products/3.png" alt="" srcset="" class="item">
+              <img src="../assets/products/3.png" alt="" srcset="" class="item">
             </div>
             <div class="item_text">
               <p  class="item_div_paragraph">Iphone 6</p>
               <p class="star_rating">
-                <span  class="star_rating_span"><img src="./assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-                <span  class="star_rating_span"><img src="./assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-                <span  class="star_rating_span"><img src="./assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-                <span  class="star_rating_span"><img src="./assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-                <span  class="star_rating_span"><img src="./assets/svgs/plain_star.svg" alt="" srcset="" class="plain_star_icon"></span>
+                <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
+                <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
+                <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
+                <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
+                <span  class="star_rating_span"><img src="../assets/svgs/plain_star.svg" alt="" srcset="" class="plain_star_icon"></span>
               </p>
               <p  class="item_div_paragraph"><span>$90</span></p>
               <p class="item_div_paragraph"><button class="item_button">buy</button></p>
             </div>
           </div>
+
+          <!------------------item for the all product section -->
           <div class="item_div">
             <div class="img_div">
-              <img src="./assets/products/4.png" alt="" srcset="" class="item">
+              <img src="../assets/products/4.png" alt="" srcset="" class="item">
             </div>
             <div class="item_text">
               <p  class="item_div_paragraph">Iphone 6</p>
               <p class="star_rating">
-                <span  class="star_rating_span"><img src="./assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-                <span  class="star_rating_span"><img src="./assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-                <span  class="star_rating_span"><img src="./assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-                <span  class="star_rating_span"><img src="./assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-                <span  class="star_rating_span"><img src="./assets/svgs/plain_star.svg" alt="" srcset="" class="plain_star_icon"></span>
+                <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
+                <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
+                <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
+                <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
+                <span  class="star_rating_span"><img src="../assets/svgs/plain_star.svg" alt="" srcset="" class="plain_star_icon"></span>
               </p>
               <p  class="item_div_paragraph"><span>$90</span></p>
               <p class="item_div_paragraph"><button class="item_button">buy</button></p>
             </div>
           </div>
+
+          <!------------------item for the all product section -->
           <div class="item_div">
             <div class="img_div">
-              <img src="./assets/products/5.png" alt="" srcset="" class="item">
+              <img src="../assets/products/5.png" alt="" srcset="" class="item">
             </div>
             <div class="item_text">
               <p  class="item_div_paragraph">Iphone 6</p>
               <p class="star_rating">
-                <span  class="star_rating_span"><img src="./assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-                <span  class="star_rating_span"><img src="./assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-                <span  class="star_rating_span"><img src="./assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-                <span  class="star_rating_span"><img src="./assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-                <span  class="star_rating_span"><img src="./assets/svgs/plain_star.svg" alt="" srcset="" class="plain_star_icon"></span>
+                <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
+                <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
+                <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
+                <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
+                <span  class="star_rating_span"><img src="../assets/svgs/plain_star.svg" alt="" srcset="" class="plain_star_icon"></span>
               </p>
               <p  class="item_div_paragraph"><span>$90</span></p>
               <p class="item_div_paragraph"><button class="item_button">buy</button></p>
             </div>
           </div>
-          
+
+          <!-----------------------stop here ----------------------------------->
+
         </div>
 
         <!----------------------------a row in the special items section to carry 5 items par row -->
         <div class="special_price_items_row">
 
 
+        <!------------------item for the all product section -->
+        <div class="item_div">
+            <div class="img_div">
+              <img src="../assets/products/6.png" alt="" srcset="" class="item">
+            </div>
+            <div class="item_text">
+              <p  class="item_div_paragraph">Iphone 6</p>
+              <p class="star_rating">
+                <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
+                <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
+                <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
+                <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
+                <span  class="star_rating_span"><img src="../assets/svgs/plain_star.svg" alt="" srcset="" class="plain_star_icon"></span>
+              </p>
+              <p  class="item_div_paragraph"><span>$90</span></p>
+              <p class="item_div_paragraph"><button class="item_button">buy</button></p>
+            </div>
+          </div>
+
           <!------------------item for the all product section -->
           <div class="item_div">
             <div class="img_div">
-              <img src="./assets/products/6.png" alt="" srcset="" class="item">
+              <img src="../assets/products/7.png" alt="" srcset="" class="item">
             </div>
             <div class="item_text">
               <p  class="item_div_paragraph">Iphone 6</p>
               <p class="star_rating">
-                <span  class="star_rating_span"><img src="./assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-                <span  class="star_rating_span"><img src="./assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-                <span  class="star_rating_span"><img src="./assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-                <span  class="star_rating_span"><img src="./assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-                <span  class="star_rating_span"><img src="./assets/svgs/plain_star.svg" alt="" srcset="" class="plain_star_icon"></span>
+                <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
+                <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
+                <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
+                <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
+                <span  class="star_rating_span"><img src="../assets/svgs/plain_star.svg" alt="" srcset="" class="plain_star_icon"></span>
               </p>
               <p  class="item_div_paragraph"><span>$90</span></p>
               <p class="item_div_paragraph"><button class="item_button">buy</button></p>
             </div>
           </div>
+
+          <!------------------item for the all product section -->
           <div class="item_div">
             <div class="img_div">
-              <img src="./assets/products/7.png" alt="" srcset="" class="item">
+              <img src="../assets/products/8.png" alt="" srcset="" class="item">
             </div>
             <div class="item_text">
               <p  class="item_div_paragraph">Iphone 6</p>
               <p class="star_rating">
-                <span  class="star_rating_span"><img src="./assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-                <span  class="star_rating_span"><img src="./assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-                <span  class="star_rating_span"><img src="./assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-                <span  class="star_rating_span"><img src="./assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-                <span  class="star_rating_span"><img src="./assets/svgs/plain_star.svg" alt="" srcset="" class="plain_star_icon"></span>
+                <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
+                <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
+                <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
+                <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
+                <span  class="star_rating_span"><img src="../assets/svgs/plain_star.svg" alt="" srcset="" class="plain_star_icon"></span>
               </p>
               <p  class="item_div_paragraph"><span>$90</span></p>
               <p class="item_div_paragraph"><button class="item_button">buy</button></p>
             </div>
           </div>
+
+          <!------------------item for the all product section -->
           <div class="item_div">
             <div class="img_div">
-              <img src="./assets/products/8.png" alt="" srcset="" class="item">
+              <img src="../assets/products/9.png" alt="" srcset="" class="item">
             </div>
             <div class="item_text">
               <p  class="item_div_paragraph">Iphone 6</p>
               <p class="star_rating">
-                <span  class="star_rating_span"><img src="./assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-                <span  class="star_rating_span"><img src="./assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-                <span  class="star_rating_span"><img src="./assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-                <span  class="star_rating_span"><img src="./assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-                <span  class="star_rating_span"><img src="./assets/svgs/plain_star.svg" alt="" srcset="" class="plain_star_icon"></span>
+                <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
+                <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
+                <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
+                <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
+                <span  class="star_rating_span"><img src="../assets/svgs/plain_star.svg" alt="" srcset="" class="plain_star_icon"></span>
               </p>
               <p  class="item_div_paragraph"><span>$90</span></p>
               <p class="item_div_paragraph"><button class="item_button">buy</button></p>
             </div>
           </div>
+
+          <!------------------item for the all product section -->
           <div class="item_div">
             <div class="img_div">
-              <img src="./assets/products/9.png" alt="" srcset="" class="item">
+              <img src="../assets/products/10.png" alt="" srcset="" class="item">
             </div>
             <div class="item_text">
               <p  class="item_div_paragraph">Iphone 6</p>
               <p class="star_rating">
-                <span  class="star_rating_span"><img src="./assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-                <span  class="star_rating_span"><img src="./assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-                <span  class="star_rating_span"><img src="./assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-                <span  class="star_rating_span"><img src="./assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-                <span  class="star_rating_span"><img src="./assets/svgs/plain_star.svg" alt="" srcset="" class="plain_star_icon"></span>
+                <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
+                <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
+                <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
+                <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
+                <span  class="star_rating_span"><img src="../assets/svgs/plain_star.svg" alt="" srcset="" class="plain_star_icon"></span>
               </p>
               <p  class="item_div_paragraph"><span>$90</span></p>
               <p class="item_div_paragraph"><button class="item_button">buy</button></p>
             </div>
           </div>
-          <div class="item_div">
-            <div class="img_div">
-              <img src="./assets/products/10.png" alt="" srcset="" class="item">
-            </div>
-            <div class="item_text">
-              <p  class="item_div_paragraph">Iphone 6</p>
-              <p class="star_rating">
-                <span  class="star_rating_span"><img src="./assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-                <span  class="star_rating_span"><img src="./assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-                <span  class="star_rating_span"><img src="./assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-                <span  class="star_rating_span"><img src="./assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-                <span  class="star_rating_span"><img src="./assets/svgs/plain_star.svg" alt="" srcset="" class="plain_star_icon"></span>
-              </p>
-              <p  class="item_div_paragraph"><span>$90</span></p>
-              <p class="item_div_paragraph"><button class="item_button">buy</button></p>
-            </div>
-          </div>
-          
+
+
+
         </div>
         <!----------------------------a row in the special items section to carry 5 items par row -->
         <div class="special_price_items_row">
 
 
+        <!------------------item for the all product section -->
+        <div class="item_div">
+            <div class="img_div">
+              <img src="../assets/products/11.png" alt="" srcset="" class="item">
+            </div>
+            <div class="item_text">
+              <p  class="item_div_paragraph">Iphone 6</p>
+              <p class="star_rating">
+                <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
+                <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
+                <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
+                <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
+                <span  class="star_rating_span"><img src="../assets/svgs/plain_star.svg" alt="" srcset="" class="plain_star_icon"></span>
+              </p>
+              <p  class="item_div_paragraph"><span>$90</span></p>
+              <p class="item_div_paragraph"><button class="item_button">buy</button></p>
+            </div>
+          </div>
+
           <!------------------item for the all product section -->
           <div class="item_div">
             <div class="img_div">
-              <img src="./assets/products/11.png" alt="" srcset="" class="item">
+              <img src="../assets/products/12.png" alt="" srcset="" class="item">
             </div>
             <div class="item_text">
               <p  class="item_div_paragraph">Iphone 6</p>
               <p class="star_rating">
-                <span  class="star_rating_span"><img src="./assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-                <span  class="star_rating_span"><img src="./assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-                <span  class="star_rating_span"><img src="./assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-                <span  class="star_rating_span"><img src="./assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-                <span  class="star_rating_span"><img src="./assets/svgs/plain_star.svg" alt="" srcset="" class="plain_star_icon"></span>
+                <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
+                <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
+                <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
+                <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
+                <span  class="star_rating_span"><img src="../assets/svgs/plain_star.svg" alt="" srcset="" class="plain_star_icon"></span>
               </p>
               <p  class="item_div_paragraph"><span>$90</span></p>
               <p class="item_div_paragraph"><button class="item_button">buy</button></p>
             </div>
           </div>
-          <div class="item_div">
-            <div class="img_div">
-              <img src="./assets/products/12.png" alt="" srcset="" class="item">
-            </div>
-            <div class="item_text">
-              <p  class="item_div_paragraph">Iphone 6</p>
-              <p class="star_rating">
-                <span  class="star_rating_span"><img src="./assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-                <span  class="star_rating_span"><img src="./assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-                <span  class="star_rating_span"><img src="./assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-                <span  class="star_rating_span"><img src="./assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-                <span  class="star_rating_span"><img src="./assets/svgs/plain_star.svg" alt="" srcset="" class="plain_star_icon"></span>
-              </p>
-              <p  class="item_div_paragraph"><span>$90</span></p>
-              <p class="item_div_paragraph"><button class="item_button">buy</button></p>
-            </div>
-          </div>
-          <div class="item_div">
-            <div class="img_div">
-              <img src="./assets/products/13.png" alt="" srcset="" class="item">
-            </div>
-            <div class="item_text">
-              <p  class="item_div_paragraph">Iphone 6</p>
-              <p class="star_rating">
-                <span  class="star_rating_span"><img src="./assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-                <span  class="star_rating_span"><img src="./assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-                <span  class="star_rating_span"><img src="./assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-                <span  class="star_rating_span"><img src="./assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-                <span  class="star_rating_span"><img src="./assets/svgs/plain_star.svg" alt="" srcset="" class="plain_star_icon"></span>
-              </p>
-              <p  class="item_div_paragraph"><span>$90</span></p>
-              <p class="item_div_paragraph"><button class="item_button">buy</button></p>
-            </div>
-          </div>
+
           
         </div>
       </div>
@@ -560,7 +548,7 @@
           <h2>Upcomming Blogs</h2>
         </div>
         <div class="blog_div_img">
-          <img src="./assets/blog/blog1.jpg" alt="">
+          <img src="../assets/blog/blog1.jpg" alt="">
         </div>
         <div  class="blog_div_text">
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo
@@ -578,7 +566,7 @@
           <h2>Upcomming Blogs</h2>
         </div>
         <div class="blog_div_img">
-          <img src="./assets/blog/blog2.jpg" alt="">
+          <img src="../assets/blog/blog2.jpg" alt="">
         </div>
         <div  class="blog_div_text">
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo
@@ -596,7 +584,7 @@
           <h2>Upcomming Blogs</h2>
         </div>
         <div class="blog_div_img">
-          <img src="./assets/blog/blog3.jpg" alt="">
+          <img src="../assets/blog/blog3.jpg" alt="">
         </div>
         <div  class="blog_div_text">
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo
