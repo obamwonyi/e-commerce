@@ -1,0 +1,15 @@
+{
+    "name": "pigwigin/e_commerce",
+    "autoload": {
+        "psr-4": {
+            "Pigwigin\\ECommerce\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "obamwonyi",
+            "email": "developer.oduwa@gmail.com"
+        }
+    ],
+    "require": {}
+}
