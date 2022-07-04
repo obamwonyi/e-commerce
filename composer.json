@@ -2,7 +2,7 @@
     "name": "pigwigin/e_commerce",
     "autoload": {
         "psr-4": {
-            "Pigwigin\\ECommerce\\": "src/"
+            "App\\": "app"
         }
     },
     "authors": [

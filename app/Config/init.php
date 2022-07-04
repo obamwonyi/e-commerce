@@ -1,5 +1,8 @@
 <?php 
 
+
+
+
 //mysql host name 
 define("DBHost","localhost");
 
@@ -14,7 +17,14 @@ define("DBPassword","666365356AdiN");
 
 
 //requiring the autoloader for loading all the classes 
-require_once __DIR__ . "../vendor/autoload.php";
+require_once __DIR__ . "/../../vendor/autoload.php";
+
+use App\Controller\Route; 
+
+
+
+$route = new Route();
+
 
 
 ?>
