@@ -4,16 +4,35 @@
 
 
 //mysql host name 
-define("DBHost","localhost");
+define("DBHOST","localhost");
 
 //mysql database name 
-define("DBName","e_commerce");
+define("DBNAME","e_commerce");
 
 //mysql user name 
-define("DBUser","admin");
+define("DBUSER","admin");
 
 //mysql password 
-define("DBPassword","666365356AdiN");
+define("DBPASSWORD","666365356AdiN");
+
+//setting an initial error page if a wrong url is passed 
+
+//current url 
+define("URL",$_SERVER["REQUEST_URI"]);
+
+//current url method 
+define("METHOD",$_SERVER["REQUEST_METHOD"]);
+
+
+if(METHOD === "GET" && URL === "/") 
+{
+    echo "This is the home page";
+}
+else 
+{
+    header("Location: /", $replace = true, $http_response_code = 404);
+    exit;
+}
 
 
 //requiring the autoloader for loading all the classes 
