@@ -24,15 +24,15 @@ define("URL",$_SERVER["REQUEST_URI"]);
 define("METHOD",$_SERVER["REQUEST_METHOD"]);
 
 
-if(METHOD === "GET" && URL === "/") 
-{
-    echo "This is the home page";
-}
-else 
-{
-    header("Location: /", $replace = true, $http_response_code = 404);
-    exit;
-}
+//building the routing system for the application 
+
+$routes = 
+[
+    "GET" => 
+    [
+        "/"
+    ]
+]
 
 
 //requiring the autoloader for loading all the classes 
