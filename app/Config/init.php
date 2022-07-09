@@ -32,7 +32,7 @@ $routes =
     [
         "/"
     ]
-]
+    ];
 
 
 //requiring the autoloader for loading all the classes 
