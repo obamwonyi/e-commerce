@@ -36,7 +36,7 @@ class Router
         $requestMethod = $_SERVER["REQUEST_METHOD"];
         $requestPath = $_SERVER["REQUEST_URI"];
 
-        $matches = $this->match($requestMethod, $requestPath);
+        $matches = $this->matching($requestMethod, $requestPath);
 
         if($matches) 
         {
@@ -76,17 +76,24 @@ class Router
         return $this->errorHandlers[500]();
     }
 
-    public function match(string $method, string $path) 
+
+
+    //rememeber this method was initially called match but for 
+    //in built syntax reasons was converted to matching  .
+    private function matching(string $method, string $path) : ?Route  
     {
         foreach($this->routes as $route) 
         {
-            if($route->matches($method, $path))
+            if($route->matches($method,$path)) 
             {
-                return $route;
+                return $route; 
             }
         }
+        
+        return null;   
     }
 
+    
     public function paths()
     {
         $paths = [];
