@@ -12,5 +12,9 @@
             "email": "developer.oduwa@gmail.com"
         }
     ],
-    "require": {}
+    "require": {},
+    "config": 
+    {
+        "process-timeout": 0
+    }
 }

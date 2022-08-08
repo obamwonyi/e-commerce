@@ -1,56 +1,80 @@
 <?php 
 
-
 namespace Framework\Routing;
+
+use FFI\Exception;
 
 use Throwable;
 
-class Router 
+class Router
 {
-    //to hold all the routing instance (for the Route class) 
-    //as an indexed array 
-    protected array $routes = [];
-
-    //to hold all the error handling methods 
-    //with the methods stored in the array using status error code as their 
-    //index (an associative array ) 
-    protected array $errorHandlers = []; 
+    protected array $routes = []; 
+    protected array $errorHandlers = [];
+    protected Route $current ; 
 
 
-    //add an instance of the Route class to the $routes array 
-    //this should be instanciated with the method , path and callable 
-    //passed to the add(__,__,__) method , 
-    public function add(string $methods, string $path, $handler)
+    public function add(string $method, string $path, $handler):Route 
     {
-        $route = $this->routes[] = new Route($methods,$path, $handler);
+        $route = $this->routes[] = new Route($method,$path,$handler);
         return $route;
-    } 
+    }
+
+    public function dispatchError():string
+    {
+        $this->errorHandlers[500] = fn() => "<h1 style =\"color:red\">There was a 500 error</h1>";
+        return $this->errorHandlers[500]();
+    }
+
+    public function dispatchNotAllowed():string 
+    {
+        $this->errorHandlers[400] = fn() => "<h1 style=\"color:red\">There was a 400 error </h1>";
+        return $this->errorHandlers[400]();
+    }
+
+    public function dispatchNotFound():string 
+    {
+        $this->errorHandlers[404] = fn() => "<h1 style=\"color:red\">There was a 404 error</h1>";
+        return $this->errorHandlers[404]();
+    }
+
+    public function errorHandler(int $code, callable $handler):string
+    {
+        $this->errorHandlers[$code] = $handler;
+        return $this->errorHandlers[$code]();
+    }
+
+    public function redirect(string $path) 
+    {
+        header("Location: {$path}", $replace=true, $code = 301);
+        exit;
+    }
+
+    public function current() 
+    {
+        return $this->current;
+    }
 
     public function dispatch()
     {
-        //store all the available routes that has 
-        //been created from all the instance 
-        //passed with the add(__,__,__) method .
-        $paths = $this->paths(); 
+        $paths = $this->paths();
+        $requestMethod = $_SERVER["REQUEST_METHOD"] ?? "GET";
+        $requestPath = $_SERVER["REQUEST_URI"] ?? "/";
 
-        $requestMethod = $_SERVER["REQUEST_METHOD"];
-        $requestPath = $_SERVER["REQUEST_URI"];
+        $matching = $this->match($requestMethod,$requestPath);
 
-        $matches = $this->matching($requestMethod, $requestPath);
-
-        if($matches) 
+        if($matching) 
         {
-            try 
+            try
             {
-                return $matches->dispatch();
+                return $matching->dispatch();
             }
             catch(Throwable $e) 
             {
-                return $this->dispatchError(); 
+                return $this->dispatchError();
             }
         }
 
-        if(in_array($requestPath,$paths)) 
+        if(in_array($requestPath,$paths))
         {
             return $this->dispatchNotAllowed();
         }
@@ -58,67 +82,58 @@ class Router
         return $this->dispatchNotFound();
     }
 
-    public function dispatchNotFound() 
-    {
-        $this->errorHandlers[404] ??= fn() => "404 error (not found)";
-        return $this->errorHandlers[404]();
-    }
-
-    public function dispatchNotAllowed() 
-    {
-        $this->errorHandlers[400] ??=fn() => "400 error (bad request)";
-        return $this->errorHandlers[400]();
-    }
-
-    public function dispatchError()
-    {
-        $this->errorHandlers[500] ??= fn() => "500 error (server error)";
-        return $this->errorHandlers[500]();
-    }
-
-
-
-    //rememeber this method was initially called match but for 
-    //in built syntax reasons was converted to matching  .
-    private function matching(string $method, string $path) : ?Route  
+    private function match(string $method,string $path):?Route
     {
         foreach($this->routes as $route) 
         {
-            if($route->matches($method,$path)) 
+            if($route->matches($method,$path))
             {
-                return $route; 
+                return $route;
             }
         }
-        
-        return null;   
+        return null;
     }
 
-    
-    public function paths()
+    private function paths():array 
     {
-        $paths = [];
+        $paths = [] ; 
         foreach($this->routes as $route) 
         {
             $paths[] = $route->path();
         }
-
-        return $paths;
+        return $paths; 
     }
 
-    public function errorHandler(string $code , callable $handler) 
-    {
-        $this->errorHandlers[$code] = $handler ; 
-        return $this->errorHandlers[$code]();
-    }
 
-    public function redirect(string $path) 
+    public function route(string $name, array $parameters) 
     {
-        header("Location {$path}", $replace=true, $http_response_code = 301);
-        exit;
+        foreach($this->routes as $route) 
+        {
+            if($route->name() === $name)
+            {
+                $finds = []; 
+                $replace = [];
+
+                foreach($parameters as $key => $value) 
+                {
+                    array_push($finds,"{{$key}}");
+                    array_push($replace,$value);
+                    //we will also add for optional 
+                    //parameters 
+                    array_push($finds,"{{$key}?}");
+                    array_push($replace,$value);
+                }
+                
+                $path = $route->path(); 
+
+                $path = str_replace($finds,$replace,$path);
+
+                $path = preg_replace_callback("#{[^}]+}#","",$path);
+
+
+            }
+        }
+        throw new Exception("no route with that name");
     }
 
 }
-
-
-
-?>
