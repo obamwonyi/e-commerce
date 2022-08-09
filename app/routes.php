@@ -6,7 +6,7 @@ return function(Router $router)
     $router->add(
         "GET", 
         "/", 
-        fn() => "<h1>Welcome to the ecommerce project home page </h1>"
+        fn() => view("home",["name" => "Destiny"])
     );
 
     $router->add(
