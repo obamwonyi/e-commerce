@@ -6,9 +6,10 @@ return function(Router $router)
     $router->add(
         "GET", 
         "/", 
-        fn() => view("main",["name" => "Destiny"])
+        fn() => view("main","landing_page",["name" => "Destiny Obamwonyi"])
     );
 
+    /*------------------codes for testing error handlers---------------*/
     $router->add(
         "GET",
         "/has-server-error",
@@ -26,7 +27,9 @@ return function(Router $router)
         "/old-home",
         fn() => $router->redirect("/")
     );
+    /*----------------end of codes for testing error handlers------------*/
 
+    /*---------------codes for testing named parameters------------------*/
     $router->add(
         "GET", 
         "/product/view/{product}", 
@@ -67,4 +70,6 @@ return function(Router $router)
         }
 
     )->name("product-list");
+
+    /*--------------------end of codes for testing named parameters------------*/
 };

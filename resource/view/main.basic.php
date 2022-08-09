@@ -79,8 +79,7 @@
 
 
 
-    <?php  include_once "./templatefiles/landing_page.php" ?>
-
+    @{template}@
 
 
 

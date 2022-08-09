@@ -3,5 +3,6 @@ namespace Framework\View\Engine;
 
 interface Engine 
 {
-    public function render(string $filePath, array $data = []):string;
+    
+    public function render(string $filePath,string $page, array $data = []):string;
 }

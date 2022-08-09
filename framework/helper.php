@@ -6,7 +6,8 @@ use Framework\View\Manager;
 if(!function_exists("view"))
 {
 
-    function view(string $template, array $data = []):string 
+    //adding the page to be replaced when a @{page}@ is found
+    function view(string $template,$page, array $data = []):string 
     {
         static $manager; 
         if(!$manager) 
@@ -18,6 +19,6 @@ if(!function_exists("view"))
             $manager->addEngine("basic.php",new BasicEngine());
         }
 
-        return $manager->render($template,$data);
+        return $manager->render($template,$page,$data);
     }
 }

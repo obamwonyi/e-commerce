@@ -28,7 +28,7 @@ class Manager
         return $this;
     }
 
-    public function render(string $template, array $data):string 
+    public function render(string $template,$page, array $data):string 
     {
         foreach($this->engines as $extension => $engine) 
         {
@@ -37,7 +37,7 @@ class Manager
                 $file = "{$path}/{$template}.{$extension}";
                 if(is_file($file))
                 {
-                    return $engine->render($file,$data);
+                    return $engine->render($file,$page,$data);
                 }
             }
         }
