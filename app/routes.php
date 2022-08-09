@@ -9,6 +9,27 @@ return function(Router $router)
         fn() => view("main","landing_page",["name" => "Destiny Obamwonyi"])
     );
 
+    $router->add(
+        "GET", 
+        "/phones/{id}",
+        function() use ($router) 
+        {
+            $parameters = $router->current()->parameters();
+            preg_match("#([0-9]+)#",$_SERVER["REQUEST_URI"],$match);
+            $id = $match[1];
+            return view("main","mobile",["id" => $id]);
+        }
+    );
+
+    $router->add(
+        "GET", 
+        "/addtocart",
+        function() use ($router) 
+        {
+            return view("main","shopping_cart");
+        }
+    );
+
     /*------------------codes for testing error handlers---------------*/
     $router->add(
         "GET",

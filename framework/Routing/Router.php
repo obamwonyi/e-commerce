@@ -16,6 +16,7 @@ class Router
     public function add(string $method, string $path, $handler):Route 
     {
         $route = $this->routes[] = new Route($method,$path,$handler);
+        $this->current = $route;
         return $route;
     }
 

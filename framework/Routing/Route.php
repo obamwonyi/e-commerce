@@ -46,8 +46,75 @@ class Route
         return $this->name;
     }
 
-    public function matches(string $method, string $path) 
+    public function matches(string $method, string $path):bool
     {
-        return $this->method === $method && $this->path === $path;
+        if($this->method === $method && $this->path === $path) 
+        {
+            return true;
+        }
+
+        $parameterNames = []; 
+
+        $pattern = $this->normalizePath($this->path);
+
+        // echo "<pre>";
+        // print_r($pattern);
+        // echo "<pre>";
+
+        $pattern = preg_replace_callback(
+            "#{([^}]+)}#",
+            function(array $found) use (&$parameterNames)
+            {
+                array_push($parameterNames,rtrim($found[1],"?"));
+                if(str_ends_with($found[1],"?"))
+                {
+                    return "([^/]*)(?:/?)";
+                }
+
+                return "([^/]+)";
+            },
+            $pattern
+        );
+
+        if(!str_contains($pattern,"*") && !str_contains($pattern,"+"))
+        {
+            return false;
+        }
+
+
+        $parameterValues = [] ; 
+
+        preg_match_all("#{$pattern}#",$this->normalizePath($path), $matches);
+
+        if(count($matches[1]) > 0)
+        {
+            foreach($matches[1] as $value) 
+            {
+                $parameterValues [] = $value;
+            }
+
+            $emptyValues = array_fill(0,count($parameterNames),null);
+
+            $parameterValues += $emptyValues;
+    
+            $this->parameters = array_combine($parameterNames,$parameterValues);
+    
+            // echo "<pre>";
+            // print_r($this->parameters);
+            // echo "<pre>";
+            return true;
+        }
+
+        return false;
+
+
+    }
+
+    public function normalizePath(string $path)
+    {
+        $path = trim($path,"/");
+        $path = "/{$path}/";
+        $path = preg_replace("/[\/]{2,}/","/",$path);
+        return $path;
     }
 }

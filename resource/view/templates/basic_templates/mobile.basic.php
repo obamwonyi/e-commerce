@@ -1,8 +1,8 @@
-<section class="mobile">
 
+<section class="mobile">
 <div class="mobile_img_div">
   <div class="mobile_phone">
-    <img src="../assets/products/8.png" alt="" srcset="" class="mobile_phone_img">
+    <img src="../assets/products/{id}.png" alt="" srcset="" class="mobile_phone_img">
   </div>
   
   <div class="large_button_div">
