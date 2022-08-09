@@ -6,7 +6,7 @@ return function(Router $router)
     $router->add(
         "GET", 
         "/", 
-        fn() => view("home",["name" => "Destiny"])
+        fn() => view("main",["name" => "Destiny"])
     );
 
     $router->add(
