@@ -23,18 +23,21 @@ class Router
     public function dispatchError():string
     {
         $this->errorHandlers[500] = fn() => "<h1 style =\"color:red\">There was a 500 error</h1>";
+        http_response_code(500);
         return $this->errorHandlers[500]();
     }
 
     public function dispatchNotAllowed():string 
     {
         $this->errorHandlers[400] = fn() => "<h1 style=\"color:red\">There was a 400 error </h1>";
+        http_response_code(400);
         return $this->errorHandlers[400]();
     }
 
     public function dispatchNotFound():string 
     {
         $this->errorHandlers[404] = fn() => "<h1 style=\"color:red\">There was a 404 error</h1>";
+        http_response_code(404);
         return $this->errorHandlers[404]();
     }
 
