@@ -178,7 +178,7 @@
   </div>
 
   <!-------------------div for and item-------------------------------------------------------------------------->
-  <div class="item_div">
+  <div class="item_div">        extract($view->data);
     <div class="img_div">
       <img src="../assets/products/3.png" alt="" srcset="" class="item">
     </div>

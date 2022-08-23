@@ -1,47 +1,70 @@
 <?php 
 namespace Framework\View;
 
-use Framework\View\Engine\Engine;
-
+use Closure;
 use Exception;
+use Framework\View\Engine\Engine;
 
 class Manager 
 {
+    //store all the template engine 
     protected array $engines = []; 
+    //store all the paths we need 
     protected array $paths = [];
-
-
-    //push path into the array of paths 
-    //then return the static instance. 
-    public function addPath(string $path):static 
+    //store all macros(small function to handle other events )
+    protected array $macros = []; 
+    
+    //adds the path to $this->paths
+    public function addPath(string $path):static
     {
         array_push($this->paths,$path);
         return $this;
     }
 
-    //add an engine to the array of engines, where 
-    //the extension act as keys to the engine values 
-    //and then finally return the static instance once more. 
-    public function addEngine(string $extension,Engine $engine):static 
+    //adds an engine to $this->engines 
+    public function addEngines(string $extension, Engine $engine):static
     {
-        $this->engines[$extension] = $engine;
+        //assign the engine argument to the engine value . 
+        $this->engines[$extension] = $engine; 
+        //set this current instance of manager as its manager
+        $this->engines[$extension]->setManager($this);
         return $this;
     }
 
-    public function render(string $template,$page, array $data):string 
+    //resolve the view for rendering by each engine . 
+    public function resolve(string $template, array $data = [])
     {
-        foreach($this->engines as $extension => $engine) 
+        foreach($this->engines as $extension => $engine)
         {
             foreach($this->paths as $path)
             {
                 $file = "{$path}/{$template}.{$extension}";
                 if(is_file($file))
                 {
-                    return $engine->render($file,$page,$data);
+                    return new View($engine,realpath($file),$data);
                 }
             }
         }
 
-        throw new Exception("un able to run the template : {$file} . ");
+        throw new Exception("Unable to find engine for template : {$template}");
+    }
+
+    //add a macro 
+    public function addMacro(string $name,Closure $closure):static 
+    {
+        $this->macros[$name] = $closure;
+        return $this;
+    }
+
+    //use a macro 
+    public function useMacro(string $name, ...$values):static 
+    {
+        if(isset($this->macros[$name]))
+        {
+            $bound = $this->macros[$name]->bindTo($this);
+            return $bound(...$values);
+        }
+
+        throw new Exception("Unable to bind the macro : {$name}");
     }
 }

@@ -68,6 +68,9 @@ class Router
 
         if($matching) 
         {
+
+            $this->current = $matching;
+            
             try
             {
                 return $matching->dispatch();

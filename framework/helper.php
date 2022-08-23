@@ -1,24 +1,29 @@
 <?php
 
+use Framework\View\Engine\AdvancedEngine;
 use Framework\View\Engine\BasicEngine;
+use Framework\View\Engine\PhpEngine;
 use Framework\View\Manager;
 
 if(!function_exists("view"))
 {
-
-    //adding the page to be replaced when a @{page}@ is found
-    function view(string $template,$page, array $data = []):string 
+    function view(string $template, array $data =[])
     {
-        static $manager; 
-        if(!$manager) 
+        static $manager ; 
+        if(!$manager)
         {
             $manager = new Manager();
 
-            $manager->addPath(__DIR__. "/../resource/view");
+            $manager->addPath(__DIR__ . "/../resource/view/");
 
-            $manager->addEngine("basic.php",new BasicEngine());
+            $manager->addEngines("basic.php",new BasicEngine());
+
+            $manager->addEngines("php",new PhpEngine());
+
+            $manager->addEngines("advanced.php", new AdvancedEngine());
+
+            /* ------------could also add macro when needed -------------*/ 
         }
-
-        return $manager->render($template,$page,$data);
+        return $manager->resolve($template,$data);
     }
 }

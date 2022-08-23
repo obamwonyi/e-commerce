@@ -98,10 +98,7 @@ class Route
             $parameterValues += $emptyValues;
     
             $this->parameters = array_combine($parameterNames,$parameterValues);
-    
-            // echo "<pre>";
-            // print_r($this->parameters);
-            // echo "<pre>";
+
             return true;
         }
 

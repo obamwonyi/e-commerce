@@ -26,7 +26,9 @@
         <!-------------------div for and item-------------------------------------------------------------------------->
         <div class="item_div">
           <div class="img_div">
-            <img src="../assets/products/1.png" alt="" srcset="" class="item">
+            <a href="phones/1"><!--current chenge -->
+              <img src="../assets/products/1.png" alt="" srcset="" class="item">
+            </a>
           </div>
           <div class="item_text">
             <p  class="item_div_paragraph">Galaxy S6 edge</p>

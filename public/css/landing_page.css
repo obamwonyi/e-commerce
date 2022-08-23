@@ -67,6 +67,15 @@
 {
     max-width:6rem;
     height:6rem;
+    transition: transform(0.5);
+}
+
+/*-----------*/
+
+.item:hover
+{
+    transition: 1s;
+    transform: scale(1.05);
 }
 
 
