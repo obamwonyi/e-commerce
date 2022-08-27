@@ -1,4 +1,7 @@
-<?php 
+<?php
+
+use App\Http\Controller\ShowLandingPageController;
+use App\Http\Controller\ShowPhonePageController;
 use Framework\Routing\Router;
 
 return function(Router $router) 
@@ -11,19 +14,18 @@ return function(Router $router)
     $router->add(
         "GET", 
         "/", 
-        fn() => view("$basicTemplates/landing_page",["name" => "Destiny Obamwonyi"])
+        [ShowLandingPageController::class,"handler",$router,$basicTemplates],
     );
 
     $router->add(
         "GET", 
         "/phones/{id}",
-        function() use ($router,$basicTemplates)
-        {
-            $parameters = $router->current()->parameters();
-            $id = $parameters["id"];
-            return view("$basicTemplates/mobile",["id" => $id]);
-        }
+        [ShowPhonePageController::class,"handler",$router,$basicTemplates],
     );
+
+
+
+
 
 
 

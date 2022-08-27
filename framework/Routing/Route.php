@@ -9,7 +9,7 @@ class Route
     protected array $parameters = [];
     protected string $name ; 
 
-    public function __construct(string $method,string $path,callable $handler)
+    public function __construct(string $method,string $path,$handler)
     {
         $this->method = $method; 
         $this->path = $path; 
@@ -28,7 +28,23 @@ class Route
 
     public function dispatch() 
     {
-        return call_user_func($this->handler);
+        if(count($this->handler) > 3) 
+        {
+            [$class,$method,$router,$engineMainTemplate] = $this->handler;
+
+            return (new $class($router,$engineMainTemplate))->{$method}();
+        }
+        
+        if(count($this->handler) > 2) 
+        {
+            [$class,$method,$router] = $this->handler;
+
+            return (new $class($router))->{$method}();
+        }
+
+        [$class, $method] = $this->handler;
+
+        return (new $class())->{$method}();
     }
 
     public function parameters() 
