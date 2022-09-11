@@ -15,7 +15,7 @@
 <div class="mobile_text_div">
   <div class="mobile_text_div1">
     <h3 class="mobile_item_name"><?php echo $item_details[0]["product_name"] ; ?></h3>
-    <p>by Redmi</p>
+    <p>by <?php echo $item_details[0]["product_brand"]; ?></p>
     <p class="mobile_star_p">
       <span class="mobile_star_p_div">
           <span  class="mobile_stars"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="mobile_star_img"></span>
@@ -33,8 +33,8 @@
 
   <div class="mobile_text_div2">
     <div class="mobile_price">
-      <p><span class="mrp">MRP:<strike><?php echo $price = $item_details[0]["product_price"]; ?></strike></span> </p>
-      <p>Deal Price <span class="m_price"><?php echo  $ninth =  $price - ((10 * $price) / 100); ?></span> including all taxes.</p>
+      <p><span class="mrp">MRP:<strike>$<?php echo $price = $item_details[0]["product_price"]; ?></strike></span> </p>
+      <p>Deal Price <span class="m_price">$<?php echo  $ninth =  $price - ((10 * $price) / 100); ?></span> including all taxes.</p>
       <p>You Save <span class="m_price">%10</span></p>
     </div>
     <div class="delivery_info">
