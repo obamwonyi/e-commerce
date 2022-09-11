@@ -2,9 +2,12 @@
 
 namespace Framework\Routing;
 
+use Dotenv\Exception\ValidationException;
 use FFI\Exception;
 
 use Throwable;
+use Whoops\Handler\PrettyPageHandler;
+use Whoops\Run;
 
 class Router
 {
@@ -77,6 +80,28 @@ class Router
             }
             catch(Throwable $e) 
             {
+
+                //remember to implement this when we creat the validation . 
+                /*
+                if($e instanceof ValidationException) 
+                {
+                    $_SESSION['errors'] = $e->getErrors();
+                    return redirect($_SERVER["HTTP_REFERER"]);
+                }
+                */
+
+                //pretty page handler for local developement trouble shooting . 
+                //and exception handling . 
+
+                if(isset($_ENV["APP_ENV"]) && $_ENV["APP_ENV"] === "dev")
+                {
+                    $whoops = new Run();
+                    $whoops->pushHandler(new PrettyPageHandler);
+                    $whoops->register();
+                    throw $e;
+                }
+
+                //if prettyPageHandler does not work then use the exception . 
                 return $this->dispatchError();
             }
         }

@@ -13,9 +13,14 @@
             "email": "developer.oduwa@gmail.com"
         }
     ],
-    "require": {},
+    "require": {
+        "filp/whoops":"^2.1", 
+        "vlucas/phpdotenv":"^5.2", 
+        "symfony/console":"^5.1"
+    },
     "config": 
     {
         "process-timeout": 0
     }
+    
 }

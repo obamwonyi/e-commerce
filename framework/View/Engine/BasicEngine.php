@@ -10,13 +10,20 @@ class BasicEngine implements Engine
     public function render(View $view):string
     {
 
+        extract($view->data);
+
         ob_start();
         include($view->path);
         $contents = ob_get_clean();
 
+        
         foreach($view->data as $key => $value)
         {
-            $contents = str_replace("{{$key}}", $value, $contents);
+            if(gettype($value) === "string") 
+            {
+                $contents = str_replace("{{$key}}", $value, $contents);
+            }
+            
         }
 
         $mainContents = file_get_contents(__DIR__ . "/../../../resource/view/basic_main/main.basic.php");

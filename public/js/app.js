@@ -3,6 +3,8 @@
 //selecting the banner background division .
 let banner_div = document.querySelector(".banner_div");
 
+//select the special price un order list 
+let special_price_ul = document.querySelector(".special_price_ul");
 
 //selecting the division for all the button for the banner 
 let bannerButton_div = document.querySelector(".banner_nav_button");
@@ -93,3 +95,87 @@ function scrollR()
     right.scrollBy(-350,0);
 }
 
+
+let all_products = document.querySelector("#special_all");
+let apple_products = document.querySelector("#special_apple");
+let redmi_products = document.querySelector("#special_redmi");
+let samsung_products = document.querySelector("#special_samsung");
+
+let special_price = "special_price_items";
+let special_price_off = "special_price_items_off";
+
+
+window.addEventListener("load", (e) => 
+{
+
+    apple_products.classList.add(special_price_off);
+
+    redmi_products.classList.add(special_price_off);
+    
+    samsung_products.classList.add(special_price_off);
+})
+
+
+special_price_ul.addEventListener("click", e => 
+{
+    e.preventDefault();
+    console.log(e.target.id);
+
+    if(e.target.id === "all")
+    {
+
+        all_products.classList.remove(special_price_off);
+        all_products.classList.add(special_price);
+
+        apple_products.classList.add(special_price_off);
+
+        redmi_products.classList.add(special_price_off);
+        
+        samsung_products.classList.add(special_price_off);
+    }
+
+    if(e.target.id === "apple") 
+    {
+        all_products.classList.add(special_price_off)
+
+        //apple_products.classList.remove(special_price);
+        apple_products.classList.add(special_price);
+        apple_products.classList.remove(special_price_off);
+    
+        redmi_products.classList.add(special_price_off);
+        
+        samsung_products.classList.add(special_price_off);
+
+    }
+
+    if(e.target.id === "redmi")
+    {
+
+
+        all_products.classList.add(special_price_off)
+
+        apple_products.classList.add(special_price_off);
+    
+        //redmi_products.classList.remove(special_price);
+        redmi_products.classList.add(special_price);
+        redmi_products.classList.remove(special_price_off);
+        
+        samsung_products.classList.add(special_price_off);
+
+    }
+
+    if(e.target.id === "samsung")
+    {
+
+        all_products.classList.add(special_price_off)
+
+        apple_products.classList.add(special_price_off);
+    
+        redmi_products.classList.add(special_price_off);
+        
+        //samsung_products.classList.remove(special_price);
+        samsung_products.classList.add(special_price);
+        samsung_products.classList.remove(special_price_off);
+
+    }
+})

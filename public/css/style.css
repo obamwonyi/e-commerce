@@ -237,3 +237,13 @@ header li
     background:rgb(196, 194, 194);
     margin-right: 10px;
 }
+
+
+.buy_button_reset
+{
+    text-decoration: none;
+    color: white;
+    background-color: orange;
+    width: 100%;
+}
+
