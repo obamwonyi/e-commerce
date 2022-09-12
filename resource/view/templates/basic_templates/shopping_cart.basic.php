@@ -185,235 +185,43 @@
   
         <div class="main_scroller">
   
-          <!-------------------div for and item-------------------------------------------------------------------------->
-          <div class="item_div">
-            <div class="img_div">
-              <img src="../assets/products/1.png" alt="" srcset="" class="item">
-            </div>
-            <div class="item_text">
-              <p  class="item_div_paragraph">Galaxy S6 edge</p>
-              <p class="star_rating">
-                <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-                <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-                <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-                <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-                <span  class="star_rating_span"><img src="../assets/svgs/plain_star.svg" alt="" srcset="" class="plain_star_icon"></span>
-              </p>
-              <p  class="item_div_paragraph"><span>$90</span></p>
-              <p class="item_div_paragraph"><button class="item_out_of_stock_button">sold</button></p>
-            </div>
-          </div>
   
-          <!-------------------div for and item-------------------------------------------------------------------------->
-          <div class="item_div">
-            <div class="img_div">
-              <img src="../assets/products/2.png" alt="" srcset="" class="item">
-            </div>
-            <div class="item_text">
-              <p  class="item_div_paragraph">Galaxy S6 edge</p>
-              <p class="star_rating">
-                <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-                <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-                <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-                <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-                <span  class="star_rating_span"><img src="../assets/svgs/plain_star.svg" alt="" srcset="" class="plain_star_icon"></span>
-              </p>
-              <p  class="item_div_paragraph"><span>$90</span></p>
-              <p class="item_div_paragraph"><button class="item_button">buy</button></p>
-            </div>
-          </div>
-  
-          <!-------------------div for and item-------------------------------------------------------------------------->
-          <div class="item_div">
-            <div class="img_div">
-              <img src="../assets/products/3.png" alt="" srcset="" class="item">
-            </div>
-            <div class="item_text">
-              <p  class="item_div_paragraph">Galaxy S6 edge</p>
-              <p class="star_rating">
-                <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-                <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-                <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-                <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-                <span  class="star_rating_span"><img src="../assets/svgs/plain_star.svg" alt="" srcset="" class="plain_star_icon"></span>
-              </p>
-              <p  class="item_div_paragraph"><span>$90</span></p>
-              <p class="item_div_paragraph"><button class="item_button">buy</button></p>
-            </div>
-          </div>
-  
-          <!-------------------div for and item-------------------------------------------------------------------------->
-          <div class="item_div">
-            <div class="img_div">
-              <img src="../assets/products/4.png" alt="" srcset="" class="item">
-            </div>
-            <div class="item_text">
-              <p  class="item_div_paragraph">Galaxy S6 edge</p>
-              <p class="star_rating">
-                <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-                <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-                <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-                <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-                <span  class="star_rating_span"><img src="../assets/svgs/plain_star.svg" alt="" srcset="" class="plain_star_icon"></span>
-              </p>
-              <p  class="item_div_paragraph"><span>$90</span></p>
-              <p class="item_div_paragraph"><button class="item_button">buy</button></p>
-            </div>
-          </div>
-  
-          <!-------------------div for and item-------------------------------------------------------------------------->
-          <div class="item_div">
-            <div class="img_div">
-              <img src="../assets/products/5.png" alt="" srcset="" class="item">
-            </div>
-            <div class="item_text">
-              <p  class="item_div_paragraph">Galaxy S6 edge</p>
-              <p class="star_rating">
-                <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-                <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-                <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-                <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-                <span  class="star_rating_span"><img src="../assets/svgs/plain_star.svg" alt="" srcset="" class="plain_star_icon"></span>
-              </p>
-              <p  class="item_div_paragraph"><span>$90</span></p>
-              <p class="item_div_paragraph"><button class="item_button">buy</button></p>
-            </div>
-          </div>
-  
-          <!-------------------div for and item-------------------------------------------------------------------------->
-          <div class="item_div">
-            <div class="img_div">
-              <img src="../assets/products/6.png" alt="" srcset="" class="item">
-            </div>
-            <div class="item_text">
-              <p  class="item_div_paragraph">Galaxy S6 edge</p>
-              <p class="star_rating">
-                <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-                <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-                <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-                <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-                <span  class="star_rating_span"><img src="../assets/svgs/plain_star.svg" alt="" srcset="" class="plain_star_icon"></span>
-              </p>
-              <p  class="item_div_paragraph"><span>$90</span></p>
-              <p class="item_div_paragraph"><button class="item_button">buy</button></p>
-            </div>
-          </div>
-  
-          <!-------------------div for and item-------------------------------------------------------------------------->
-          <div class="item_div">
-            <div class="img_div">
-              <img src="../assets/products/7.png" alt="" srcset="" class="item">
-            </div>
-            <div class="item_text">
-              <p  class="item_div_paragraph">Galaxy S6 edge</p>
-              <p class="star_rating">
-                <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-                <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-                <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-                <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-                <span  class="star_rating_span"><img src="../assets/svgs/plain_star.svg" alt="" srcset="" class="plain_star_icon"></span>
-              </p>
-              <p  class="item_div_paragraph"><span>$90</span></p>
-              <p class="item_div_paragraph"><button class="item_button">buy</button></p>
-            </div>
-          </div>
-  
-          <!-------------------div for and item-------------------------------------------------------------------------->
-          <div class="item_div">
-            <div class="img_div">
-              <img src="../assets/products/8.png" alt="" srcset="" class="item">
-            </div>
-            <div class="item_text">
-              <p  class="item_div_paragraph">Galaxy S6 edge</p>
-              <p class="star_rating">
-                <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-                <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-                <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-                <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-                <span  class="star_rating_span"><img src="../assets/svgs/plain_star.svg" alt="" srcset="" class="plain_star_icon"></span>
-              </p>
-              <p  class="item_div_paragraph"><span>$90</span></p>
-              <p class="item_div_paragraph"><button class="item_button">buy</button></p>
-            </div>
-          </div>
-  
-          <!-------------------div for and item-------------------------------------------------------------------------->
-          <div class="item_div">
-            <div class="img_div">
-              <img src="../assets/products/9.png" alt="" srcset="" class="item">
-            </div>
-            <div class="item_text">
-              <p  class="item_div_paragraph">Galaxy S6 edge</p>
-              <p class="star_rating">
-                <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-                <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-                <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-                <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-                <span  class="star_rating_span"><img src="../assets/svgs/plain_star.svg" alt="" srcset="" class="plain_star_icon"></span>
-              </p>
-              <p  class="item_div_paragraph"><span>$90</span></p>
-              <p class="item_div_paragraph"><button class="item_button">buy</button></p>
-            </div>
-          </div>
-  
-          <!-------------------div for and item-------------------------------------------------------------------------->
-          <div class="item_div">
-            <div class="img_div">
-              <img src="../assets/products/10.png" alt="" srcset="" class="item">
-            </div>
-            <div class="item_text">
-              <p  class="item_div_paragraph">Galaxy S6 edge</p>
-              <p class="star_rating">
-                <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-                <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-                <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-                <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-                <span  class="star_rating_span"><img src="../assets/svgs/plain_star.svg" alt="" srcset="" class="plain_star_icon"></span>
-              </p>
-              <p  class="item_div_paragraph"><span>$90</span></p>
-              <p class="item_div_paragraph"><button class="item_button">buy</button></p>
-            </div>
-          </div>
-  
-          <!-------------------div for and item-------------------------------------------------------------------------->
-          <div class="item_div">
-            <div class="img_div">
-              <img src="../assets/products/11.png" alt="" srcset="" class="item">
-            </div>
-            <div class="item_text">
-              <p  class="item_div_paragraph">Galaxy S6 edge</p>
-              <p class="star_rating">
-                <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-                <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-                <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-                <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-                <span  class="star_rating_span"><img src="../assets/svgs/plain_star.svg" alt="" srcset="" class="plain_star_icon"></span>
-              </p>
-              <p  class="item_div_paragraph"><span>$90</span></p>
-              <p class="item_div_paragraph"><button class="item_button">buy</button></p>
-            </div>
-          </div>
-  
-          <!-------------------div for and item-------------------------------------------------------------------------->
-          <div class="item_div">
-            <div class="img_div">
-              <img src="../assets/products/12.png" alt="" srcset="" class="item">
-            </div>
-            <div class="item_text">
-              <p  class="item_div_paragraph">Galaxy S6 edge</p>
-              <p class="star_rating">
-                <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-                <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-                <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-                <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span>
-                <span  class="star_rating_span"><img src="../assets/svgs/plain_star.svg" alt="" srcset="" class="plain_star_icon"></span>
-              </p>
-              <p  class="item_div_paragraph"><span>$90</span></p>
-              <p class="item_div_paragraph"><button class="item_button">buy</button></p>
-            </div>
-          </div>
-  
-         
+        
+
+        <?php foreach($products as $item) {  ?>  
+
+<div class="item_div">
+  <div class="img_div">
+    <a href="phones/<?php echo $item["id"];?>"><!--current chenge -->
+      <img src="../assets/products/<?php echo $item["id"];?>.png" alt="" srcset="" class="item">
+    </a>
+  </div>
+  <div class="item_text">
+    <p  class="item_div_paragraph"><?php echo $item["product_name"] ;?></p>
+    <p class="star_rating">
+        <?php 
+        {
+            $item_rating = $item["product_rating"];
+            $no_rating = 5 - $item_rating;
+
+            for($i = 0 ; $i < $item_rating; $i++)
+            {
+                echo ' <span  class="star_rating_span"><img src="../assets/svgs/gold_star.svg" alt="" srcset="" class="gold_star_icon"></span> ';
+            }
+
+            for($x = 0; $x < $no_rating; $x++)
+            {
+                echo ' <span  class="star_rating_span"><img src="../assets/svgs/plain_star.svg" alt="" srcset="" class="plain_star_icon"></span> ';
+            }
+        }
+        ?>
+    </p>
+    <p  class="item_div_paragraph"><span>$<?php echo $item["product_price"];?></span></p>
+    <p class="item_div_paragraph"><button class="item_button"><a class="buy_button_reset" href="phones/<?php echo $item["id"];?>">buy</a></button></p>
+  </div>
+</div>
+
+<?php                              }  ?>
   
   
         </div>

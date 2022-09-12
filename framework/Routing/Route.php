@@ -1,6 +1,8 @@
 <?php
 namespace Framework\Routing;
 
+use App\Http\Controller\AddToCartPageController;
+
 class Route
 {
     protected string $method; 
@@ -31,6 +33,7 @@ class Route
         if(count($this->handler) > 3) 
         {
             [$class,$method,$router,$engineMainTemplate] = $this->handler;
+
 
             return (new $class($router,$engineMainTemplate))->{$method}();
         }
@@ -130,4 +133,6 @@ class Route
         $path = preg_replace("/[\/]{2,}/","/",$path);
         return $path;
     }
+
+
 }

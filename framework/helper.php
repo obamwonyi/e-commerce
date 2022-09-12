@@ -16,6 +16,10 @@ if(!function_exists("view"))
 
             $manager->addPath(__DIR__ . "/../resource/view/");
 
+            //$manager->addPath(__DIR__ . "/../resource/view/templates/advanced_templates");
+            $manager->addPath(__DIR__ . "/../resource/view/advanced_main");
+
+
             $manager->addEngines("basic.php",new BasicEngine());
 
             $manager->addEngines("php",new PhpEngine());

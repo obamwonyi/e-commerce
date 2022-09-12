@@ -6,8 +6,8 @@
   </div>
   
   <div class="large_button_div">
-    <button class="buy_button">Proceed to Buy Product</button>
-    <button class="add_to_cart_button">Add to Cart</button>
+    <button class="buy_button"><a href="#" class="buy_button_anchor">Proceed to Buy Product</a> </button>
+    <button class="add_to_cart_button"><a href="/cart/{id}" class="add_to_cart_button_anchor">Add to Cart</a> </button>
   </div>
 </div>
 
@@ -132,10 +132,6 @@
 
 <?php 
 
-// echo "<pre>";
-// print_r($products);
-// print_r($item_details);
-// echo "<pre>";
 
 ?>
 

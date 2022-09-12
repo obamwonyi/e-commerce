@@ -8,7 +8,9 @@ use Framework\Database\Factory;
 
 class ShowPhonePageController
 {
+
     protected Router $router; 
+
     protected string $engineMainTemplate;
 
     public function __construct(Router $router, $engineMainTemplate)
@@ -18,12 +20,11 @@ class ShowPhonePageController
     }
 
 
-
-
     public function handler()
     {
         $parameters = $this->router->current()->parameters();
         $id = $parameters["id"];
+
 
         $factory = new Factory(); 
 
@@ -36,7 +37,7 @@ class ShowPhonePageController
 
         $products = $connection
                     ->query()
-                    ->select() 
+                    ->select()
                     ->from('products')
                     ->all();
 
