@@ -2,7 +2,9 @@
 
 namespace Framework\Routing;
 
-use Dotenv\Exception\ValidationException;
+//use Dotenv\Exception\ValidationException;
+
+use Framework\Validation\ValidationException;
 
 
 use FFI\Exception;
@@ -84,13 +86,14 @@ class Router
             {
 
                 //remember to implement this when we creat the validation . 
-                /*
+                
                 if($e instanceof ValidationException) 
                 {
                     $_SESSION['errors'] = $e->getErrors();
+                    
                     return redirect($_SERVER["HTTP_REFERER"]);
                 }
-                */
+                
 
                 //pretty page handler for local developement trouble shooting . 
                 //and exception handling . 
@@ -139,7 +142,7 @@ class Router
     }
 
 
-    public function route(string $name, array $parameters) 
+    public function route(string $name, array $parameters = []) 
     {
         foreach($this->routes as $route) 
         {

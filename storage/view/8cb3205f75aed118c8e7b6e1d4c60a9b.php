@@ -36,10 +36,16 @@
         </div>
       </div>
       <div class="middle_login_form_div">
-        <form action="" class="login_form">
+        <form action="/login" class="login_form" method="POST">
           <input type="hidden" name="hidden">
           <input class="email" type="text" name="email" placeholder="Email">
-          <input class="password" type="password" placeholder="Password">
+          <?php if($_SESSION['errors']): ?>
+              <p class="error_message"><?php print  $_SESSION['errors']['email'][0] ; ?></p>
+              <?php endif; ?>
+          <input class="password" name="password" type="password" placeholder="Password">
+          <?php if($_SESSION['errors']): ?>
+              <p class="error_message"><?php print  $_SESSION['errors']['password'][0] ; ?></p>
+              <?php endif; ?>
           <div class="remember_me_and_forgot_password">
             <div class="remember">
               <input class="checkbox_input" type="checkbox">
@@ -61,7 +67,9 @@
 
 </section>
 
-
+<?php 
+  $_SESSION['errors'] = null;
+?>
 
 
   </body>

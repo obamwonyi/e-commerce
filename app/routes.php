@@ -4,7 +4,9 @@ use App\Http\Controller\ShowLandingPageController;
 use App\Http\Controller\ShowPhonePageController;
 use App\Http\Controller\AddToCartPageController;
 use App\Http\Controller\FormControllers\LoginPageController;
+use App\Http\Controller\FormControllers\LoginController;
 use App\Http\Controller\FormControllers\SignupPageController;
+use App\Http\Controller\FormControllers\SignupController;
 use Framework\Routing\Router;
 
 return function(Router $router) 
@@ -32,17 +34,34 @@ return function(Router $router)
         [AddToCartPageController::class,'handler', $router,$basicTemplates],
     );
     
+    //router for handling the login page only 
     $router->add(
         "GET", 
         "/login", 
         [LoginPageController::class, 'handler', $router, $advancedTemplates],
     );
+    //router for handling the login validation 
+    $router->add(
+        "POST", 
+        "/login", 
+        [LoginController::class,'handler', $router],
+    );
 
+
+
+    //router for handling the signup page only 
     $router->add(
         "GET", 
         "/signup", 
         [SignupPageController::class,"handler",$router,$advancedTemplates],
-    );
+    )->name("show-sign-up-form");
+
+    //router for handling the signup validation controller 
+    $router->add(
+        "POST", 
+        "/signup", 
+        [SignupController::class,"handler",$router],
+    )->name("signup-user");
 
 
 

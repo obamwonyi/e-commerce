@@ -29,20 +29,26 @@
             </div>
             <div class="login_text">
               <div class="login_text_div">
-                <h2>Enter a valid Mail</h2>
+                <h3>Sign Up With a valid Mail</h3>
               </div>
               
             </div>
           </div>
           <div class="middle_login_form_div">
-            <form action="" class="login_form">
+            <form action="/signup" class="login_form" method="POST">
               <input type="hidden" name="hidden">
               <input class="email" type="text" name="email" placeholder="Email">
-              <input class="password" type="password" placeholder="Password">
+              <?php if($_SESSION['errors']): ?>
+              <p class="error_message"><?php print  $_SESSION['errors']['email'][0] ; ?></p>
+              <?php endif; ?>
+              <input class="password" name="password" type="password" placeholder="Password">
+              <?php if($_SESSION['errors']): ?>
+              <p class="error_message"><?php print  $_SESSION['errors']['password'][0] ; ?></p>
+              <?php endif; ?>
               <div class="remember_me_and_forgot_password">
                 <div class="remember">
-                  <input class="checkbox_input" type="checkbox">
-                  <label class="checkbox_label"  for="remember_me">Accept user agreement</label>
+                  <input class="checkbox_input" name="useragreement"  type="checkbox">
+                  <label class="checkbox_label" for="remember_me">Accept user agreement</label>
                   <a href="/user_agreement" class="user_agreement">User Agreement</a>
                 </div>
                 <!-- <div class="forgot_password">
@@ -60,9 +66,30 @@
         </div>
     
     </section>
-    
 
 
+    <section class="popup popup_display_off">
+      <div class="popup_div">
+        <div class="popup_main_box">
+          <div class="close_popup">
+            <button id="img_button" class="img_button">
+              <img id="close_button" class="close_img" src="../assets/close_popup.svg" alt="" srcset="">
+            </button>
+          </div>
+          <div class="popup_message">
+            <p class="popup_message_p">Please accept the user agreement</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <?php 
+      $_SESSION['errors'] = null;
+    ?>
+
+
+    <script src="../js/signup.js"></script>
   </body>
 
   </html>

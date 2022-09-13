@@ -1,6 +1,7 @@
 <?php 
 namespace Framework\Database\QueryBuilder;
 
+use Exception;
 use Framework\Database\Connection\Connection;
 use Framework\Database\Exception\QueryException;
 //the pdo class 
@@ -94,9 +95,19 @@ abstract class QueryBuilder
         }
 
 
+
         if(isset($this->equal))
         {
-            $query .=" = {$this->equal}";
+
+            if(gettype($query) === "string")
+            {
+                $query .= " = \"{$this->equal}\"";
+            }
+            else
+            {
+                 $query .=" = {$this->equal}";
+            }
+           
         }
         //note the offset will be given a default value 
         //of 0 
