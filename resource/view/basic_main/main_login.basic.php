@@ -26,7 +26,7 @@
         <div class="div_before_nav_links">
           <p>
             <button class="login_button">
-              <a href="/login" class="login_link">Logout<span><img src="../assets/svgs/locked.svg" alt="" srcset="" class="login_icon"></span></a>
+              <a href="/logout" class="login_link">Logout<span><img src="../assets/svgs/locked.svg" alt="" srcset="" class="login_icon"></span></a>
             </button>
           </p>
           <p>
