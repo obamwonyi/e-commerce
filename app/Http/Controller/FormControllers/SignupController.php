@@ -3,6 +3,7 @@ namespace App\Http\Controller\FormControllers;
 
 
 use Framework\Routing\Router;
+use App\Models\User;
 
 
 class SignupController 
@@ -19,24 +20,31 @@ class SignupController
     {
 
 
+        //check for csrf token and matching 
+        secure();
+
         
         $data = validate(
             $_POST, 
             [
+                'name' => ['required'],
                 'email' => ['required', 'email'],
                 'password' => ['required','min:10']
             ]
             );
 
-            echo "<pre>";
-            print_r($data);
-            echo "<pre>";
+            $user = new User();
+            $user->name = $data["name"];
+            $user->email = $data['email'];
+            $user->password = password_hash($data["password"], PASSWORD_BCRYPT);
+            $user->save();
 
 
-            // use $data to create a database record
 
-            // $_SESSION["registered"] = true; 
+            $_SESSION["registered"] = true; 
 
-            // return redirect("/");
+            //unset($_SESSION["token"]);
+
+            return redirect("/");
     }
 }

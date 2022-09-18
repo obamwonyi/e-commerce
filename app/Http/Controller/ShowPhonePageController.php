@@ -45,8 +45,7 @@ class ShowPhonePageController
                         ->query()
                         ->select() 
                         ->from("products")
-                        ->where("id")
-                        ->equal($id)
+                        ->where("id","=","{$id}")
                         ->all();
 
         return view("$this->engineMainTemplate/mobile",

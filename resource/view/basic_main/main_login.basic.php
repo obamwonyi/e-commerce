@@ -14,11 +14,11 @@
 
     <!---------------this is the beginning of the header section, it will be available for most of the e_commerce page ----------------->
     <header>
-      <div class="div_before_nav">
+    <div class="div_before_nav">
         <div class="div_before_nav_first_div" >
           <p>
-            <button class="sign_in_button">
-              <a href="/signup" class="login_link">Sign Up<span><img src="../assets/svgs/signin2.svg" alt="" srcset="" class="login_icon"></span></a>
+            <button class="user_button">
+              <a href="/signup" class="login_link"><span><img src="../assets/svgs/user.svg" alt="" srcset="" class="login_icon"></span><span class="user_icon"><?php echo $_SESSION["user_name"]; ?></span></a>
             </button>
           </p>
         </div>
@@ -26,7 +26,7 @@
         <div class="div_before_nav_links">
           <p>
             <button class="login_button">
-              <a href="/login" class="login_link">Login<span><img src="../assets/svgs/open.svg" alt="" srcset="" class="login_icon"></span></a>
+              <a href="/login" class="login_link">Logout<span><img src="../assets/svgs/locked.svg" alt="" srcset="" class="login_icon"></span></a>
             </button>
           </p>
           <p>
@@ -130,6 +130,8 @@
       </div>
 
       
+
+
 
       <div class="copy_write">
         <h3>&#169;Copyrights 2022 Designed by <span class="name">Destiny Obamwonyi</span></h3>

@@ -7,6 +7,7 @@ use App\Http\Controller\FormControllers\LoginPageController;
 use App\Http\Controller\FormControllers\LoginController;
 use App\Http\Controller\FormControllers\SignupPageController;
 use App\Http\Controller\FormControllers\SignupController;
+use App\Http\Controller\FormControllers\LogoutUserController;
 use Framework\Routing\Router;
 
 return function(Router $router) 
@@ -62,6 +63,14 @@ return function(Router $router)
         "/signup", 
         [SignupController::class,"handler",$router],
     )->name("signup-user");
+
+
+    //router for handling logout controller 
+    $router->add(
+        "GET", 
+        "/logout", 
+        [LogoutUserController::class,"handler", $router],
+    );
 
 
 

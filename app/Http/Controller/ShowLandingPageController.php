@@ -43,25 +43,23 @@ class ShowLandingPageController
                     ->query()
                     ->select()
                     ->from('products')
-                    ->where("product_name")
-                    ->like("Iphone")
+                    ->where("product_brand","=","Apple")
                     ->all();
 
             $samsung = $connection
                     ->query()
                     ->select()
                     ->from('products')
-                    ->where("product_name")
-                    ->like("Samsung")
+                    ->where("product_brand","=","Samsung")
                     ->all();
 
             $redmi = $connection
                     ->query()
                     ->select()
                     ->from('products')
-                    ->where("product_name")
-                    ->like("Redmi")
+                    ->where("product_brand","=","Xiaomi")
                     ->all();
+
 
 
         return view(

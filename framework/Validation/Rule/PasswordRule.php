@@ -2,6 +2,8 @@
 
 namespace Framework\Validation\Rule;
 
+use App\Models\User;
+
 use Exception;
 use InvalidArgumentException;
 
@@ -19,44 +21,23 @@ class PasswordRule implements Rule
             return true; 
         }
 
-        $email = $data['email']; 
 
-        $factory = new Factory();
+        //this will return the values of the email if found 
+        $user = User::where('email',"=", $data["email"])->first();
 
-        $factory->addConnector("mysql", function($config)
-        {
-            return new MysqlConnection($config);
-        });
 
-        $connection = $factory->connect(require_once __DIR__ . "/../../../app/Config/database.php");
+        $_SESSION["user"] = $user;
 
-        $emailPassword = $connection
-        ->query()
-        ->select("password")
-        ->from("users")
-        ->where("email")
-        ->equal($email)
-        ->all();
+  
+        //this was were we set the user sessions data 
+        if ($user && password_verify($data[$field], $user->password)) {
+            $_SESSION["user_id"] = $user->id;
+            $_SESSION["user_name"] = $user->name;
 
-        $passwordDatabaseValue =$emailPassword[0]["password"];
-
-        $passwordFormValue = $data["password"]; 
-        
-        if(!isset($passwordDatabaseValue))
-        {
-            return false;
+            return true;
         }
 
-        //hashing it here for the pupose of our demo before the migration comes
-        //as the actual hashed value is what should be stored in the database 
-        $hashedPassword = password_hash($passwordDatabaseValue,PASSWORD_BCRYPT);
-
-        if(!(password_verify($passwordFormValue,$hashedPassword)))
-        {
-            return false;
-        }
-
-        return true;
+        return false;
     }
 
     public function getMessage(array $data, string $field, array $params)

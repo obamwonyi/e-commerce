@@ -37,7 +37,7 @@
       </div>
       <div class="middle_login_form_div">
         <form action="/login" class="login_form" method="POST">
-          <input type="hidden" name="hidden">
+        <input type="hidden" name="csrf" value="<?php print $this->escape( csrf() ); ?>">
           <input class="email" type="text" name="email" placeholder="Email">
           <?php if($_SESSION['errors']): ?>
               <p class="error_message"><?php print  $_SESSION['errors']['email'][0] ; ?></p>

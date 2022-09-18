@@ -1,187 +1,302 @@
-<?php 
+<?php
+
 namespace Framework\Database\QueryBuilder;
 
-use Exception;
 use Framework\Database\Connection\Connection;
 use Framework\Database\Exception\QueryException;
-//the pdo class 
-use PDO;
+use Pdo;
+use PdoStatement;
 
-use PDOStatement;
-
-abstract class QueryBuilder 
+abstract class QueryBuilder
 {
-    protected string $type ; 
-    protected string $columns;
-    protected string $table; 
-    protected mixed $equal;
-    //to select using the where query 
-    protected string $where; 
-    //to implement the like for comperism
-    protected string $like; 
-    protected int $limit  ;
+    protected string $type;
+    protected array $columns;
+    protected string $table;
+    protected int $limit;
     protected int $offset;
+    protected array $values;
+    protected array $wheres = [];
 
-
-    /*
-    this will fetch the instance for the particular 
-    connection we need .  
-    */
-    //abstract public function connection(): Connection;
-
-
-    //this will fetch all the value in a particular 
-    //table . 
-    public function all(): array 
+    /**
+     * Fetch all rows matching the current query
+     */
+    public function all(): array
     {
-        $statement = $this->prepare();
-        $statement->execute();
-        //will return our fetched value in an associative array 
-        return $statement->fetchAll(PDO::FETCH_ASSOC);
-    }
-
-
-    //prepare a query for a paticular connection . 
-    public function prepare(): PDOStatement
-    {
-        $query = "";
-
-        if($this->type === "select")
-        {
-            $query = $this->compileSelect($query);
-            $query = $this->compileWhere($query);
-            $query = $this->compileLimit($query);
- 
+        if (!isset($this->type)) {
+            $this->select();
         }
 
-        if(empty($query))
-        {
-            throw new QueryException("Unrecognised query type");
+        $statement = $this->prepare();
+        $statement->execute($this->getWhereValues());
+
+        return $statement->fetchAll(Pdo::FETCH_ASSOC);
+    }
+
+    /**
+     * Get the values for the where clause placeholders
+     */
+    protected function getWhereValues(): array
+    {
+        $values = [];
+
+        if (count($this->wheres) === 0) {
+            return $values;
+        }
+
+        foreach ($this->wheres as $where) {
+            $values[$where[0]] = $where[2];
+        }
+
+        return $values;
+    }
+
+    /**
+     * Prepare a query against a particular connection
+     */
+    public function prepare(): PdoStatement
+    {
+        $query = '';
+
+        if ($this->type === 'select') {
+            $query = $this->compileSelect($query);
+            $query = $this->compileWheres($query);
+            $query = $this->compileLimit($query);
+        }
+
+        if ($this->type === 'insert') {
+            $query = $this->compileInsert($query);
+        }
+
+        if ($this->type === 'update') {
+            $query = $this->compileUpdate($query);
+            $query = $this->compileWheres($query);
+        }
+
+        if ($this->type === 'delete') {
+            $query = $this->compileDelete($query);
+            $query = $this->compileWheres($query);
+        }
+
+        if (empty($query)) {
+            throw new QueryException('Unrecognised query type');
         }
 
         return $this->connection->pdo()->prepare($query);
     }
 
-    //compile a select query with the columns and table
-    //value 
-    //note: it has a default column value of all(*) 
-    public function compileSelect(string $query): string 
+    /**
+     * Add select clause to the query
+     */
+    protected function compileSelect(string $query): string
     {
-        $query .= " SELECT {$this->columns} FROM {$this->table}";
+        $joinedColumns = join(', ', $this->columns);
+
+        $query .= " SELECT {$joinedColumns} FROM {$this->table}";
+
         return $query;
     }
 
-    protected function compileLimit(string $query):string 
+    /**
+     * Add limit and offset clauses to the query
+     */
+    protected function compileLimit(string $query): string
     {
-        if(isset($this->limit))
-        {
-            $query .=" LIMIT {$this->limit}";
+        if (isset($this->limit)) {
+            $query .= " LIMIT {$this->limit}";
         }
 
-        //note the offset will be given a default value 
-        //of 0 
-        if(isset($this->offset))
-        {
+        if (isset($this->offset)) {
             $query .= " OFFSET {$this->offset}";
         }
 
         return $query;
     }
-    protected function compileWhere(string $query):string 
+
+    /**
+     * Add where clauses to the query
+     */
+    protected function compileWheres(string $query): string
     {
-        if(isset($this->where))
-        {
-            $query .=" WHERE {$this->where}";
+        if (count($this->wheres) === 0) {
+            return $query;
         }
 
+        $query .= ' WHERE';
 
-
-        if(isset($this->equal))
-        {
-
-            if(gettype($query) === "string")
-            {
-                $query .= " = \"{$this->equal}\"";
+        foreach ($this->wheres as $i => $where) {
+            if ($i > 0) {
+                $query .= ', ';
             }
-            else
-            {
-                 $query .=" = {$this->equal}";
-            }
-           
-        }
-        //note the offset will be given a default value 
-        //of 0 
-        if(isset($this->like))
-        {
-            $query .= " LIKE '%{$this->like}%' ";
+
+            [$column, $comparator, $value] = $where;
+
+            $query .= " {$column} {$comparator} :{$column}";
         }
 
         return $query;
     }
 
-
-    // public function one():array 
-    // {
-    //     $statement = $this->prepare();
-    //     $statement->execute();
-    //     return $statement->fetchAll(PDO::FETCH_ASSOC);
-    // }
-
-    //fetch the first row of any table . 
-    public function first():array 
+    /**
+     * Add insert clause to the query
+     */
+    protected function compileInsert(string $query): string
     {
-        //note take here will set the limit and 
-        //offset for this particular QueryBuilder instance . 
-        $statement = $this->take(1)->prepare();
-        $statement->execute();
-        return $statement->fetchAll(PDO::FETCH_ASSOC);
+        $joinedColumns = join(', ', $this->columns);
+        $joinedPlaceholders = join(', ', array_map(fn($column) => ":{$column}", $this->columns));
+
+        $query .= " INSERT INTO {$this->table} ({$joinedColumns}) VALUES ({$joinedPlaceholders})";
+
+        return $query;
     }
 
+    /**
+     * Add update clause to the query
+     */
+    protected function compileUpdate(string $query): string
+    {
+        $joinedColumns = '';
 
-    //sets the value for the current instance offset and limit value 
-    //then return the static instance . 
+        foreach ($this->columns as $i => $column) {
+            if ($i > 0) {
+                $joinedColumns .= ', ';
+            }
+
+            $joinedColumns = " {$column} = :{$column}";
+        }
+
+        $query .= " UPDATE {$this->table} SET {$joinedColumns}";
+
+        return $query;
+    }
+
+    /**
+     * Add delete clause to the query
+     */
+    protected function compileDelete(string $query): string
+    {
+        $query .= " DELETE FROM {$this->table}";
+        return $query;
+    }
+
+    /**
+     * Fetch the first row matching the current query
+     */
+    public function first(): array
+    {
+        if (!isset($this->type)) {
+            $this->select();
+        }
+
+        $statement = $this->take(1)->prepare();
+        $statement->execute($this->getWhereValues());
+
+        $result = $statement->fetchAll(Pdo::FETCH_ASSOC);
+
+        if (count($result) === 1) {
+            return $result[0];
+        }
+
+        return [];
+    }
+
+    /**
+     * Limit a set of query results so that it's possible
+     * to fetch a single or limited batch of rows
+     */
     public function take(int $limit, int $offset = 0): static
     {
-        $this->limit = $limit; 
-        $this->offset = $offset; 
+        $this->limit = $limit;
+        $this->offset = $offset;
+
         return $this;
     }
 
-
-    public function equal($value):static 
+    /**
+     * Indicate which table the query is targetting
+     */
+    public function from(string $table): static
     {
-        $this->equal = $value;
+        $this->table = $table;
         return $this;
     }
 
-    public function from(string $table):static 
+    /**
+     * Indicate the query type is a "select" and remember 
+     * which fields should be returned by the query
+     */
+    public function select(mixed $columns = '*'): static
     {
-        $this->table = $table; 
-        return $this; 
-    }
+        if (is_string($columns)) {
+            $columns = [$columns];
+        }
 
-    //to set the where column to check in the comparerism 
-    public function where(string $column):static 
-    {
-        $this->where = $column;
+        $this->type = 'select';
+        $this->columns = $columns;
+
         return $this;
     }
 
-
-
-    //to set a value for the like operator for comparism
-    public function like(string $product):static 
+    /**
+     * Insert a row of data into the table specified in the query
+     * and return the number of affected rows
+     */
+    public function insert(array $columns, array $values): int
     {
-        $this->like = $product; 
+        $this->type = 'insert';
+        $this->columns = $columns;
+        $this->values = $values;
+
+        $statement = $this->prepare();
+
+        return $statement->execute($values);
+    }
+
+    /**
+     * Store where clause data for later queries
+     */
+    public function where(string $column, mixed $comparator, mixed $value = null): static
+    {
+        if (is_null($value) && !is_null($comparator)) {
+            array_push($this->wheres, [$column, '=', $comparator]);
+        } else {
+            array_push($this->wheres, [$column, $comparator, $value]);
+        }
+
         return $this;
     }
 
-    public function select(string $columns = "*"):static
+    /**
+     * Insert a row of data into the table specified in the query
+     * and return the number of affected rows
+     */
+    public function update(array $columns, array $values): int
     {
-        $this->type = "select";
-        $this->columns = $columns; 
-        return $this;
+        $this->type = 'update';
+        $this->columns = $columns;
+        $this->values = $values;
+
+        $statement = $this->prepare();
+
+        return $statement->execute($this->getWhereValues() + $values);
     }
 
+    /**
+     * Get the ID of the last row that was inserted
+     */
+    public function getLastInsertId(): string
+    {
+        return $this->connection->pdo()->lastInsertId();
+    }
 
+    /**
+     * Delete a row from the database
+     */
+    public function delete(): int
+    {
+        $this->type = 'delete';
+
+        $statement = $this->prepare();
+
+        return $statement->execute($this->getWhereValues());
+    }
 }

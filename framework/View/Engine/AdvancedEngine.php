@@ -96,6 +96,11 @@ class AdvancedEngine implements Engine
     }
 
 
+    public function escape($value)
+    {
+        return htmlspecialchars($value,ENT_QUOTES);
+    }
+
     protected function extends(string $template):static
     {
         $backtrace = debug_backtrace(DEBUG_BACKTRACE_IGNORE_ARGS,1);

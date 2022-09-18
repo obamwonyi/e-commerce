@@ -472,3 +472,121 @@
 {
     color: rgb(0, 132, 255);
 }
+
+
+
+/*----------------------------------styling the pre nav bar section -------------------------------*/
+
+.sign_in_button 
+{
+    background-color: rgb(95, 194, 247);
+    padding: 5px;
+    color: white;
+    border: 1px ;
+    border-radius: 5px;
+}
+
+.sign_in_button:hover
+{
+    background-color: rgb(95, 194, 247);
+    padding: 5px;
+    color: white;
+    border: 1px ;
+    border-radius: 5px;
+    box-shadow: 2px -2px 10px rgb(165, 164, 164),
+    -2px -2px 10px rgb(165, 164, 164);
+}
+
+
+
+/*-----------this is the section for login button ---------------------*/
+.login_button 
+{
+    background-color: rgb(95, 194, 247);
+    padding: 5px;
+    color: white;
+    border: 1px ;
+    border-radius: 5px;
+}
+
+.login_button:hover
+{
+    background-color: rgb(95, 194, 247);
+    padding: 5px;
+    color: white;
+    border: 1px ;
+    border-radius: 5px;
+    box-shadow: 2px -2px 10px rgb(165, 164, 164),
+    -2px -2px 10px rgb(165, 164, 164);
+}
+
+.wish_list_button 
+{
+    background-color: rgb(95, 194, 247);
+    padding: 5px;
+    color: white;
+    border: 1px ;
+    border-radius: 5px;
+}
+
+.wish_list_button:hover
+{
+    background-color: rgb(95, 194, 247);
+    padding: 5px;
+    color: white;
+    border: 1px ;
+    border-radius: 5px;
+    box-shadow: 2px -2px 10px rgb(165, 164, 164),
+    -2px -2px 10px rgb(165, 164, 164);
+}
+
+/* .user_button 
+{
+    background-color: rgb(95, 194, 247);
+    padding: 5px;
+    color: white;
+    border: 1px ;
+    border-radius: 5px;
+} */
+
+.user_button
+{
+    background-color:black;
+    padding: 5px;
+    color: white;
+    border: 1px ;
+    border-radius: 5px;
+    box-shadow: 2px -2px 10px rgb(165, 164, 164),
+    -2px -2px 10px rgb(165, 164, 164);
+}
+
+.user_button > a 
+{
+    color: white;
+}
+
+.login_button > a 
+{
+    color: white;
+}
+
+.wish_list_button > a 
+{
+    color: white;
+}
+
+
+.sign_in_button > a 
+{
+    color:  white;
+}
+
+
+.user_icon
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width : 40px;
+    height : 25px;
+}

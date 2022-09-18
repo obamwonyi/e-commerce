@@ -2,6 +2,8 @@
 namespace App\Http\Controller\FormControllers;
 
 
+use App\Models\User;
+use Exception;
 use Framework\Routing\Router;
 
 
@@ -19,6 +21,8 @@ class LoginController
     {
 
 
+        //check for csrf token and matching
+        secure();
         
         $data = validate(
             $_POST, 
@@ -28,15 +32,8 @@ class LoginController
             ]
             );
 
-            echo "<pre>";
-            print_r($data);
-            echo "<pre>";
+        $_SESSION["loged_in"] = true;
 
-
-            // use $data to create a database record
-
-            // $_SESSION["registered"] = true; 
-
-            // return redirect("/");
+        return redirect("/");
     }
 }

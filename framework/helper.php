@@ -65,4 +65,51 @@ if(!function_exists("validate"))
 
         return $manager->validate($data,$rules);
     }
+
+
+    if(!function_exists('csrf'))
+    {
+        function csrf() 
+        {
+            $_SESSION["token"] = bin2hex(random_bytes(32));
+            return $_SESSION['token'];
+        }
+    }
+
+
+    if(!function_exists('secure'))
+    {
+        function secure() 
+        {
+            if(!isset($_POST['csrf']) || !isset($_SESSION['token']) ||
+             !hash_equals($_SESSION["token"],$_POST["csrf"]))
+             {
+                throw new Exception("CSRF token mismatch");
+             }
+        }
+    }
+
+    
+    if (!function_exists('dd')) {
+        function dd(...$params)
+        {
+            var_dump(...$params);
+            die;
+        }
+    }
+    
+    if (!function_exists('basePath')) {
+        function basePath(string $newBasePath = null): ?string
+        {
+            static $basePath;
+    
+            if (!is_null($newBasePath)) {
+                $basePath = $newBasePath;
+            }
+    
+            return $basePath;
+        }
+    }
+
+
 }

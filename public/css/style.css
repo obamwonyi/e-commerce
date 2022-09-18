@@ -10,7 +10,7 @@ header
     display: flex;
     flex-direction: column;
     width: 100vw;
-    height: 80px;
+    height: 100px;
     text-decoration: none;
     list-style-type: none;
     
@@ -40,7 +40,7 @@ header li
 .div_before_nav
 {
     display: flex;
-    height:35%;
+    height:45%;
     align-items: center;
     padding-top: 5px;
 }
@@ -53,6 +53,7 @@ header li
 .div_before_nav_links 
 {
     display: flex;
+    height: 100%;
     width: 20%;
     justify-content: center;
 }
@@ -120,9 +121,12 @@ header li
 .div_before_nav_first_div
 {
     display: flex;
+    align-items: center;
     width:80%;
+    height: 100%;
     padding-left: 30px;
 }
+
 /*div_before_nav_first_div*/
 
 /* ---------------beginning of the navigation bar styling -----------------------------*/
@@ -131,7 +135,8 @@ header li
 {
 
     background-color:rgb(95, 194, 247); 
-    height:65%;
+    height:55%;
+    margin-top: 5px;
     display:flex;
     align-items: center;
 }

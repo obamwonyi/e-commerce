@@ -16,6 +16,7 @@ class BasicEngine implements Engine
         include($view->path);
         $contents = ob_get_clean();
 
+        ob_end_clean();
         
         foreach($view->data as $key => $value)
         {
@@ -26,7 +27,21 @@ class BasicEngine implements Engine
             
         }
 
-        $mainContents = file_get_contents(__DIR__ . "/../../../resource/view/basic_main/main.basic.php");
+        if(isset($_SESSION["loged_in"]))
+        {
+            ob_start();
+            include(__DIR__ . "/../../../resource/view/basic_main/main_login.basic.php");
+            $mainContents = ob_get_clean();
+            ob_end_clean();
+        }
+        else
+        {
+            ob_start();
+            include(__DIR__ . "/../../../resource/view/basic_main/main.basic.php");
+            $mainContents = ob_get_clean();
+            ob_end_clean();
+        }
+        
 
         $mainContents = str_replace("@{template}@",$contents,$mainContents);
 
