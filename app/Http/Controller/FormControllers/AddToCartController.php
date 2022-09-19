@@ -6,12 +6,11 @@ use Framework\Database\Factory;
 
 use Framework\Database\Connection\MysqlConnection;
 
-use App\Models\User;
-use Exception;
 use Framework\Routing\Router;
+use App\Models\AddToCart;
+use App\Models\User;
 
-
-class LoginController 
+class AddToCartController 
 {
     protected Router $router; 
 
@@ -25,19 +24,19 @@ class LoginController
     {
 
 
-        //check for csrf token and matching
-        secure();
-        
-        $data = validate(
-            $_POST, 
-            [
-                'email' => ['required', 'email_login'],
-                'password' => ['required','password']
-            ]
-            );
 
 
-            $userEmail= $data['email'];
+        //adding the data fetched to the database 
+            $cart = new AddToCart();
+            $cart->user_email = $_SESSION["user_email"];
+            $cart->product_id = $_SESSION["item_details"][0]["id"];
+            $cart->product_name = $_SESSION["item_details"][0]["product_name"];
+            $cart->product_price = $_SESSION["item_details"][0]["product_price"];
+            $cart->save();
+
+
+
+            $userEmail= $_SESSION["user_email"];
 
 
             $factory = new Factory(); 
@@ -64,10 +63,7 @@ class LoginController
         
             $_SESSION["numberOfItems"] = $numberOfCartItems;
 
-
-        $_SESSION["loged_in"] = true;
-
-
-        return redirect("/");
+            //unset($_SESSION["token"]);
+            return redirect($_SERVER["HTTP_REFERER"]);
     }
 }

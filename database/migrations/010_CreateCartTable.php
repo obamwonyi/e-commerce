@@ -1,17 +1,17 @@
-<?php
+<?php 
 
 use Framework\Database\Connection\Connection;
 
-class CreateProductsTable
+class CreateCartTable
 {
     public function migrate(Connection $connection)
     {
-        $table = $connection->createTable('products');
+        $table = $connection->createTable('cart');
         $table->id('id');
+        $table->string('user_email');
+        $table->int('product_id');
         $table->string('product_name');
-        $table->int('product_rating');
         $table->int('product_price');
-        $table->string("product_brand");
         $table->execute();
     }
 }

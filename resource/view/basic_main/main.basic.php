@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../css/landing_page.css" />
     <link rel="stylesheet" href="../css/shopping_cart.css" />
     <link rel="stylesheet" href="../css/mobile.css" />
+    <link rel="stylesheet" href="../css/sign_in.css"/>
   </head>
   <body>
 
@@ -31,7 +32,7 @@
           </p>
           <p>
             <button class="wish_list_button">
-              <a href="/wish_list" class="login_link">Wishlist<span><img src="../assets/svgs/wishlist2.svg" alt="" srcset="" class="login_icon"></span></a>
+              <a href="/wish_list" id="wishlist_button" class="login_link">Wishlist<span><img src="../assets/svgs/wishlist2.svg" alt="" srcset="" class="login_icon"></span></a>
             </button>
           </p>
           
@@ -83,6 +84,77 @@
       </nav>
     </header>
 
+
+  <!----------------setting the cooking for this page  ----------------------------->
+  <?php if(isset($_SESSION["registered"])) { setcookie("registered", "true" , time() + 86400); } ?> 
+
+    <!--------------------------------the pop up message section -------------------------------------------------> 
+    <section class="popup popup_display_off">
+      <div class="popup_div">
+        <div class="popup_main_box">
+          <div class="close_popup">
+            <button id="img_button" class="img_button">
+              <img id="close_button" class="close_img" src="../assets/close_popup.svg" alt="" srcset="">
+            </button>
+          </div>
+          <div class="popup_message">
+            <p class="popup_message_p  popup_message_p_main">Please login to your account</p>
+            <p>
+            <button class="login_button">
+              <a href="/login" class="login_link remove_underline_login">Login<span><img src="../assets/svgs/open.svg" alt="" srcset="" class="login_icon"></span></a>
+            </button>
+          </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-------------------------------the pop up message section ending ---------------------------------------------------> 
+    
+
+    <!--------------------------------the pop up message for wishlist section -------------------------------------------------> 
+    <section class="popup_wishlist popup_display_off">
+      <div class="popup_div">
+        <div class="popup_main_box">
+          <div class="close_popup">
+            <button id="img_button2" class="img_button">
+              <img id="close_button2" class="close_img" src="../assets/close_popup.svg" alt="" srcset="">
+            </button>
+          </div>
+          <div class="popup_message">
+            <p class="popup_message_p  popup_message_p_main">Please login to see your wishlist</p>
+            <p>
+            <button class="login_button">
+              <a href="/login" class="login_link remove_underline_login">Login<span><img src="../assets/svgs/open.svg" alt="" srcset="" class="login_icon"></span></a>
+            </button>
+          </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-------------------------------the pop up message for wishlist section ending ---------------------------------------------------> 
+    
+    <!--------------------------------the pop up message for wishlist section -------------------------------------------------> 
+    <section class="popup_addToCart popup_display_off">
+      <div class="popup_div">
+        <div class="popup_main_box">
+          <div class="close_popup">
+            <button id="img_button3" class="img_button">
+              <img id="close_button3" class="close_img" src="../assets/close_popup.svg" alt="" srcset="">
+            </button>
+          </div>
+          <div class="popup_message">
+            <p class="popup_message_p  popup_message_p_main">Please Login to add an Item to your Cart</p>
+            <p>
+            <button class="login_button">
+              <a href="/login" class="login_link remove_underline_login">Login<span><img src="../assets/svgs/open.svg" alt="" srcset="" class="login_icon"></span></a>
+            </button>
+          </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-------------------------------the pop up message for wishlist section ending ---------------------------------------------------> 
+    
 
 
     @{template}@
@@ -138,6 +210,21 @@
 
 
 
+    <script src="../js/landing_page.js"></script>
     <script src="../js/app.js"></script>
+    <script src="../js/signup.js"></script>
   </body>
 </html>
+
+<?php 
+if (isset($_SERVER['HTTP_COOKIE'])) {
+    $cookies = explode(';', $_SERVER['HTTP_COOKIE']);
+    foreach($cookies as $cookie) {
+        $parts = explode('=', $cookie);
+        $name = trim($parts[0]);
+        setcookie($name, '', time()-1000);
+        setcookie($name, '', time()-1000, '/');
+    }
+}
+
+?>

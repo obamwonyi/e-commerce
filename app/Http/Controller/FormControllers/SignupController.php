@@ -43,6 +43,7 @@ class SignupController
 
             $_SESSION["registered"] = true; 
 
+
             //unset($_SESSION["token"]);
 
             return redirect("/");

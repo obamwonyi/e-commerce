@@ -268,7 +268,38 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    position: absolute;
+    /* position: absolute; */
+    position: fixed;
+    z-index: 2;
+}
+
+.popup_wishlist
+{
+    top: 0px;
+    width: 100vw;
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.259);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* position: absolute; */
+    position: fixed;
+    z-index: 2;
+}
+
+.popup_addToCart
+{
+    top: 0px;
+    width: 100vw;
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.259);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* position: absolute; */
+    position: fixed;
     z-index: 2;
 }
 
@@ -339,6 +370,15 @@
     visibility: none;
 }
 
+.popup_message_p_main
+{
+    margin-bottom: 20px;
+}
+
+.remove_underline_login
+{
+    text-decoration: none;
+}
 
 
 /*----------------------end of popup message styling -------------------------------------*/

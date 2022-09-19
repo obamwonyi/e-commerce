@@ -31,7 +31,7 @@
           </p>
           <p>
             <button class="wish_list_button">
-              <a href="/wish_list" class="login_link">Wishlist<span><img src="../assets/svgs/wishlist2.svg" alt="" srcset="" class="login_icon"></span></a>
+              <a href="/wishlist" class="login_link">Wishlist<span><img src="../assets/svgs/wishlist2.svg" alt="" srcset="" class="login_icon"></span></a>
             </button>
           </p>
           
@@ -75,7 +75,7 @@
           <p>
             <div class="shopping_cart_div">
               <a class="shopping_cart_button" href="./templates/shopping_cart.html" ><img src="../assets/svgs/shopping_cart1.svg" alt="" srcset="" class="shopping_cart"></a>
-              <span class="shopping_cart_value">0</span>
+              <span class="shopping_cart_value"><?php  echo isset($_SESSION["numberOfItems"]) ? $_SESSION["numberOfItems"] : 0 ?></span>
             </div>
 
           </p>

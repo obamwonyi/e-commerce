@@ -1,6 +1,7 @@
 <?php 
 namespace App\Http\Controller;
 
+use Exception;
 use Framework\Database\Connection\MysqlConnection;
 use Framework\Routing\Router;
 
@@ -47,6 +48,15 @@ class ShowPhonePageController
                         ->from("products")
                         ->where("id","=","{$id}")
                         ->all();
+
+
+
+        
+
+        if(isset($_SESSION["loged_in"]))
+        {
+            $_SESSION["item_details"] = $item_details;
+        }
 
         return view("$this->engineMainTemplate/mobile",
         [

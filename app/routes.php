@@ -1,13 +1,14 @@
 <?php
 
+use App\Http\Controller\FormControllers\AddToCartController;
 use App\Http\Controller\ShowLandingPageController;
 use App\Http\Controller\ShowPhonePageController;
-use App\Http\Controller\AddToCartPageController;
 use App\Http\Controller\FormControllers\LoginPageController;
 use App\Http\Controller\FormControllers\LoginController;
 use App\Http\Controller\FormControllers\SignupPageController;
 use App\Http\Controller\FormControllers\SignupController;
 use App\Http\Controller\FormControllers\LogoutUserController;
+use App\Http\Controller\FormControllers\WishlistPageController;
 use Framework\Routing\Router;
 
 return function(Router $router) 
@@ -29,11 +30,19 @@ return function(Router $router)
         [ShowPhonePageController::class,"handler",$router,$basicTemplates],
     );
 
+    //cart page route handler 
     $router->add(
         "GET", 
-        "/cart/{id}",
-        [AddToCartPageController::class,'handler', $router,$basicTemplates],
+        "/wishlist",
+        [WishlistPageController::class,'handler', $router,$basicTemplates],
     );
+
+    //cart page route handler 
+    // $router->add(
+    //     "GET",
+    //     "/wishlist",
+    //     [AddToCartPageController::class,'handler', $router,$basicTemplates],
+    // );
     
     //router for handling the login page only 
     $router->add(
@@ -70,6 +79,13 @@ return function(Router $router)
         "GET", 
         "/logout", 
         [LogoutUserController::class,"handler", $router],
+    );
+
+    //router for adding an item to cart 
+    $router->add(
+        "POST", 
+        "/addToCart", 
+        [AddToCartController::class,"handler", $router],
     );
 
 

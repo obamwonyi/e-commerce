@@ -1,4 +1,9 @@
 
+<!---------------------------------the section for the pop up message -----------------------------> 
+
+
+
+
 <section class="mobile">
 <div class="mobile_img_div">
   <div class="mobile_phone">
@@ -6,8 +11,13 @@
   </div>
   
   <div class="large_button_div">
-    <button class="buy_button"><a href="#" class="buy_button_anchor">Proceed to Buy Product</a> </button>
-    <button class="add_to_cart_button"><a href="/cart/{id}" class="add_to_cart_button_anchor">Add to Cart</a> </button>
+    <button class="buy_button"><a href="/buy_product" class="buy_button_anchor">Proceed to Buy Product</a> </button>
+    <button id="addToCart_button" class="add_to_cart_button">
+      <form action="/addToCart" method="POST"  >
+        <input type="submit"  value="Add To Cart">
+      </form>
+      
+    </button>
   </div>
 </div>
 
