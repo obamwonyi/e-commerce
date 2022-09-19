@@ -13,8 +13,8 @@
   <div class="large_button_div">
     <button class="buy_button"><a href="/buy_product" class="buy_button_anchor">Proceed to Buy Product</a> </button>
     <button id="addToCart_button" class="add_to_cart_button">
-      <form action="/addToCart" method="POST"  >
-        <input type="submit"  value="Add To Cart">
+      <form class="addToCartForm" action="/addToCart" method="POST"  >
+        <input class="addToCartSubmitInput" type="submit"  value="Add To Cart">
       </form>
       
     </button>
