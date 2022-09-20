@@ -141,5 +141,6 @@
 
 
     <script src="../js/app.js"></script>
+    <script src="../js/mobile.js"></script>
   </body>
 </html>

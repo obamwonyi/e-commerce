@@ -10,6 +10,8 @@ use Framework\Database\Factory;
 class ShowPhonePageController
 {
 
+
+
     protected Router $router; 
 
     protected string $engineMainTemplate;
@@ -23,6 +25,11 @@ class ShowPhonePageController
 
     public function handler()
     {
+
+
+
+
+
         $parameters = $this->router->current()->parameters();
         $id = $parameters["id"];
 
@@ -34,7 +41,7 @@ class ShowPhonePageController
             return new MysqlConnection($config);
         });
 
-        $connection = $factory->connect(require_once __DIR__ . "/../../Config/database.php");
+        $connection = $factory->connect(include_once __DIR__ . "/../../Config/database.php");
 
         $products = $connection
                     ->query()

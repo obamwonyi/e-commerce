@@ -14,6 +14,7 @@
     <button class="buy_button"><a href="/buy_product" class="buy_button_anchor">Proceed to Buy Product</a> </button>
     <button id="addToCart_button" class="add_to_cart_button">
       <form class="addToCartForm" action="/addToCart" method="POST"  >
+        <input class="hidden_input"  name="number_of_items" type="hidden" value=1>
         <input class="addToCartSubmitInput" type="submit"  value="Add To Cart">
       </form>
       
@@ -95,9 +96,9 @@
       <span class="quantity_input_form">
         Qty: 
         <span class="form add_margin">
-          <button class="input_add input_button">-</button>
-          <input type="text" id="quantity_input" class="quantity_input" value="1">
-          <button class="input_drop input_button">+</button>
+          <button class="input_drop input_button">-</button>
+          <input type="text" id="quantity_input" class="input_drop input_button" value=1>
+          <button class="input_add input_button">+</button>
       </span>
       </span>
 
