@@ -64,6 +64,8 @@ class LoginController
         
             $_SESSION["numberOfItems"] = $numberOfCartItems;
 
+            $_SESSION["all_cart_items"] = $itemsInCart;
+
 
         $_SESSION["loged_in"] = true;
 

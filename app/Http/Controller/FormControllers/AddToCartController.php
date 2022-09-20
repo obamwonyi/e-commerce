@@ -71,6 +71,8 @@ class AddToCartController
             ->where("user_email","=","{$userEmail}")
             ->all();
 
+            $_SESSION["all_cart_items"] = $itemsInCart;
+
             $numberOfCartItems = count($itemsInCart);
         
             $_SESSION["numberOfItems"] = $numberOfCartItems;
