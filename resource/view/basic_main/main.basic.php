@@ -39,7 +39,11 @@
         </div>
       </div>
       <nav class="nav">
-        <div class="mobile_shopee">Mobile Shopee</div>
+        <div class="mobile_shopee">
+          <p>
+          <a href="/" id="home_button" class="login_link"><span><img src="../assets/svgs/home.svg" alt="" srcset="" class="home_icon"></span></a>
+          </p>
+        </div>
         <ul class="nav_ul">
           <li><a href="">On Site</a></li>
           <li>

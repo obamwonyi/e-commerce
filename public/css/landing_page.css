@@ -593,3 +593,32 @@
     /* width : 40px; */
     height : 25px;
 }
+
+
+/*-----------------------styling the home icon */
+
+#home_button
+{
+    background-color: rgb(95, 194, 247);
+    padding: 5px;
+    color: white;
+    border: 1px  ;
+    border-radius: 5px;
+}
+
+#home_button:hover
+{
+    background-color: rgb(95, 194, 247);
+    padding: 5px;
+    color: white;
+    border: 1px  solid black ;
+    border-radius: 5px;
+}
+
+
+
+.home_icon 
+{
+    width : 35px;
+    height : 35px;
+}
