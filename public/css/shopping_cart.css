@@ -260,4 +260,17 @@
 {
     margin-top: 50px;
 }
-/*--------------------------end of styling for the cart section ----------------------------*/ 
+/*--------------------------end of styling for the cart section ----------------------------*/
+
+
+/* ----------------------------------remove item from shopping cart button styling -----------------___*/
+
+.remove_item_button
+{
+    padding: 5px;
+    border: 1px solid ;
+    border-radius: 5px;
+    background-color: red;
+    color: wheat;
+    cursor: pointer;
+}

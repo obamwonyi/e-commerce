@@ -29,27 +29,6 @@ class WishlistPageController
 
         
 
-        $all_cart_items = $_SESSION["all_cart_items"];
-
-        /* 
-        Array ( 
-        [0] => Array ( [id] => 1 [user_email] => victoria@gmail.com [product_id] =>2 [product_name] => [product_price] => ) 
-        [1] => Array ( [id] => 2 [user_email] => victoria@gmail.com [product_id] =>1 [product_name] => [product_price] => )
-        [2] => Array ( [id] => 3 [user_email] => victoria@gmail.com [product_id] => 1 [product_name] => Iphone 5 [product_price] => 700 )
-        [3] => Array ( [id] => 4 [user_email] => victoria@gmail.com [product_id] => 2 [product_name] => Iphone 6 [product_price] => 750 )
-        [4] => Array ( [id] => 5 [user_email] => victoria@gmail.com [product_id] => 4 [product_name] => Redmi Note [product_price] => 450 )
-        [5] => Array ( [id] => 6 [user_email] => victoria@gmail.com [product_id] => 2 [product_name] => Iphone 6 [product_price] => 750 )
-        [6] => Array ( [id] => 7 [user_email] => victoria@gmail.com [product_id] => 2 [product_name] => Iphone 6 [product_price] => 750 )
-        [7] => Array ( [id] => 8 [user_email] => victoria@gmail.com [product_id] => 2 [product_name] => Iphone 6 [product_price] => 750 )
-        [8] => Array ( [id] => 9 [user_email] => victoria@gmail.com [product_id] => 2 [product_name] => Iphone 6 [product_price] => 750 )
-        [9] => Array ( [id] => 10 [user_email] => victoria@gmail.com [product_id] => 2 [product_name] => Iphone 6 [product_price] => 750 )
-        [10] => Array ( [id] => 11 [user_email] => victoria@gmail.com [product_id] => 2 [product_name] => Iphone 6 [product_price] => 750 )
-        [11] => Array ( [id] => 12 [user_email] => victoria@gmail.com [product_id] => 2 [product_name] => Iphone 6 [product_price] => 750 ) 
-        )
-        */
-
-
-
         $factory = new Factory(); 
 
         $factory->addConnector("mysql", function($config) 
@@ -62,26 +41,76 @@ class WishlistPageController
 
         $connection = $factory->connect(include_once __DIR__ . "/../../../Config/database.php");
 
-        $all_fetched_items = []; 
+//^^^^-------------------re initializing all the items in cart -------------------------------
 
+        $userEmail = $_SESSION["user_email"];
+        $itemsInCart = $connection
+        ->query()
+        ->select() 
+        ->from("cart")
+        ->where("user_email","=","{$userEmail}")
+        ->all();
+        $_SESSION["all_cart_items"] = $itemsInCart;
+
+
+        $all_cart_items = $_SESSION["all_cart_items"];
+
+//vvvv------------------------------------------------------------------------------------------
+
+
+//^^^^---------------loading up all the fetched items -------------------------------------
+        $all_fetched_items = []; 
         //fetching each value in the cart product_id 
         foreach($all_cart_items as $a_cart_item) 
         {
-
             $an_item = $connection
             ->query()
-            ->select() 
+            ->select()
             ->from("products")
             ->where("id","=","{$a_cart_item["product_id"]}")
             ->all();
 
+            $an_item[0]["product_id"] = $a_cart_item["product_id"];
+
             $all_fetched_items[] = $an_item;
 
-        }
+        }  
 
 
         $_SESSION["all_fetched_items"] = $all_fetched_items;
+//vvvv----------------------------------------------------------------------------------------------
 
+
+//^^^^--------------------------calculating all the sum total -------------------------
+        $sum_total_of_items = 0 ;
+        //fetching the total amount of items in the cart . 
+        foreach($all_fetched_items as $an_item)
+        {
+            $sum_total_of_items += $an_item[0]["product_price"];
+        }
+
+        $_SESSION["sum_total_of_items"] = $sum_total_of_items;
+
+
+        $products = $connection
+        ->query()
+        ->select() 
+        ->from('products')
+        ->all();
+//vvvv-------------------------------------------------------------------------------------------
+
+
+//^^^^---------------------------------------number of cart items -----------------------
+        $itemsInCart = $connection
+        ->query()
+        ->select() 
+        ->from("cart")
+        ->where("user_email","=","{$_SESSION["user_email"]}")
+        ->all();
+        $numberOfCartItems = count($itemsInCart);
+
+        $_SESSION["numberOfItems"] = $numberOfCartItems;
+//vvvv--------------------------------------------------------------------------------------
 
         // throw new Exception();
 
@@ -89,6 +118,7 @@ class WishlistPageController
 
         return view("$this->engineMainTemplate/shopping_cart",
         [
+            "products" => $products
         ]);
     }
 

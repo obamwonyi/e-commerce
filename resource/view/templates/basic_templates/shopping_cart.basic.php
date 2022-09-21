@@ -48,7 +48,12 @@
                                     </span>
                                 </p>
                                     <span class="item_link">
-                                        <span>this will hold the delete form </span>
+                                        <span>
+                                            <form action="/delete_item" method="POST">
+                                            <input type="hidden" name="delete_cart_item_id" value=<?php echo $an_item[0]["product_id"] ;?>>
+                                            <input class="remove_item_button" type="submit" value="Remove">
+                                            </form>
+                                        </span>
                                     </span>
                                 </p>
                             </div>
@@ -63,7 +68,7 @@
                     </div>
 
 
-                    <?php   }                                                      ?>
+                    <?php                       }                                            ?>
 
 
                 <!----------------closing of the containers for the items section ------------------------>
@@ -78,7 +83,7 @@
                 </div>
 
                 <div class="total_cart_div_bottom">
-                  <p>Subtotal[2 items]: <span class="subtotal_price">301.00</span></p>
+                  <p>Subtotal[<?php echo $_SESSION["numberOfItems"]; ?> items]: <span class="subtotal_price">$<?php echo $_SESSION["sum_total_of_items"]; ?></span></p>
                   <button class="total_button">Proceed To Buy</button>
                 </div>
             </div>
@@ -105,7 +110,7 @@
   
         
 
-        <?php foreach($products as $item) {  ?>  
+<?php foreach($products as $item) {  ?>  
 
 <div class="item_div">
   <div class="img_div">

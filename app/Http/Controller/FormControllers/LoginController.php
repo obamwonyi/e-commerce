@@ -39,6 +39,8 @@ class LoginController
 
             $userEmail= $data['email'];
 
+            $_SESSION["user_email"] = $userEmail;
+
 
             $factory = new Factory(); 
 

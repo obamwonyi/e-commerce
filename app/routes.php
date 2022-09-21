@@ -8,6 +8,7 @@ use App\Http\Controller\FormControllers\LoginController;
 use App\Http\Controller\FormControllers\SignupPageController;
 use App\Http\Controller\FormControllers\SignupController;
 use App\Http\Controller\FormControllers\LogoutUserController;
+use App\Http\Controller\FormControllers\RemoveCartItemController;
 use App\Http\Controller\FormControllers\WishlistPageController;
 use Framework\Routing\Router;
 
@@ -86,6 +87,13 @@ return function(Router $router)
         "POST", 
         "/addToCart", 
         [AddToCartController::class,"handler", $router],
+    );
+
+    //router for delete a cart item for each user 
+    $router->add(
+        "POST", 
+        "/delete_item", 
+        [RemoveCartItemController::class,"handler", $router],
     );
 
 

@@ -2,6 +2,7 @@
 
 namespace Framework\Database\QueryBuilder;
 
+use Exception;
 use Framework\Database\Connection\Connection;
 use Framework\Database\Exception\QueryException;
 use Pdo;
@@ -75,6 +76,7 @@ abstract class QueryBuilder
         if ($this->type === 'delete') {
             $query = $this->compileDelete($query);
             $query = $this->compileWheres($query);
+            $query = $this->compileLimitOnly($query);
         }
 
         if (empty($query)) {
@@ -109,6 +111,16 @@ abstract class QueryBuilder
             $query .= " OFFSET {$this->offset}";
         }
 
+
+        return $query;
+    }
+
+    protected function compileLimitOnly(string $query): string
+    {
+        if (isset($this->limit)) {
+            $query .= " LIMIT {$this->limit}";
+        }
+
         return $query;
     }
 
@@ -132,6 +144,9 @@ abstract class QueryBuilder
 
             $query .= " {$column} {$comparator} :{$column}";
         }
+
+
+        //throw new Exception();
 
         return $query;
     }
