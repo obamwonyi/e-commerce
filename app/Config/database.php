@@ -4,9 +4,9 @@
 return 
 [
     "type" => "mysql", 
-    "host" => "127.0.0.1", 
+    "host" => "us-cdbr-east-06.cleardb.net", 
     "port" => "3306",
     "database" => "e_commerce",
-    "username" => "Admin",
-    "password" => 'askabans_codeAdiN',
+    "username" => "b3dabb3090432d",
+    "password" => 'e560a15b',
 ];
