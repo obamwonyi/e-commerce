@@ -48,13 +48,13 @@ return function(Router $router)
     //router for handling the login page only 
     $router->add(
         "GET", 
-        "/login", 
+        "/https://destinedwebe-commerce.herokuapp.com/login", 
         [LoginPageController::class, 'handler', $router, $advancedTemplates],
     );
     //router for handling the login validation 
     $router->add(
         "POST", 
-        "/login", 
+        "/https://destinedwebe-commerce.herokuapp.com/login", 
         [LoginController::class,'handler', $router],
     );
 
